@@ -1,7 +1,8 @@
 # micro-sass
+ruby-sassを利用するためruby環境とsassのインストールが必要
 
 ```
-hub clone kobabasu/micro-sass src
+hub clone kobabasu/micro-sass sass
 ```
 
 ## npm
