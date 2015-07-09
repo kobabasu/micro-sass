@@ -23,10 +23,11 @@
   "devDependencies": {
   },
   "scripts": {
-    "preinstall": "npm install -g bower; bower install",
+    "preinstall": "npm install -g bower styledocco; bower install",
     "start": "NODE_ENV=production NODE_PATH=",
     "sass": "sass --no-cache --sourcemap=file ./style.sass:./sample/css/style.css",
-    "build": "npm run sass"
+    "doc": "styledocco -n 'css reference' -o docs/sass --preprocessor 'sass' ./*.sass ./**/*.sass",
+    "build": "npm run sass; npm run doc"
   },
   "preferGlobal": true,
   "author": "kobabasu",
