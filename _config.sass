@@ -1,38 +1,40 @@
 /*
   # config.sass
-  グローバルな変数を定義  
+  各ライブラリ用の環境設定 
   */
 
-
 /*
-  # common
+  # sass
   sassのwarningを抑制
   */
 
 $disable-warnings: true
 
 /*
-  # font
-  遊ゴシックはieでのline-heightで  
-  違いがあるため見送りメイリオで統一  
+  # bourbon
+  remの基準値を設定
+  vars.sass内で読込  
+  vars.sass内でbase-emをエイリアスとして設定
   */
 
-$base-font-family: Meiryo, メイリオ, arial, Helvetica, sans-serif
-$sub-font-family: YuGothic, '游ゴシック', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN', Meiryo, メイリオ, arial, Helvetica, sans-serif
-
-$base-font-size:     1.4rem
-$base-line-height:   2.0rem
+$em-base: 10px
 
 /*
-  # base color
+  # neat
+  neatの設定  
+  visual-gridは縦のgridを表示する設定  
+  gridを消す場合は$visual-gridをfalseに
   */
 
-$color-text:         #000
-$color-bg:           #FFF
-$color-grayonbg:     darken($color-bg, 10%)
+$max-width: 960px
+$visual-grid: true
+$visual-grid-color: #EEE
+$visual-grid-index: back
+$visual-grid-opacity: 0.4
 
 /*
-  # layout
+  # font-awesome
+  fontawesomeのパスの設定
   */
 
-$body-min-width:     960px
+$fa-font-path: '/sass/vendor/font-awesome/fonts'

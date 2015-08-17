@@ -3,12 +3,22 @@
   色,文字サイズなどアピアランスに関するクラスを定義
   */
 
+
 /*
   # h1
-  idがついたh1に設定  
-  bitters officialとあわせる
+  ヘッダの縦中央にみせるためpadding-topを追加  
+  font-sizeをあげる
   */
 
-h1[id]
-  margin-bottom: .5em
-  font-size: 1.5em
+section[id] > h1:first-child
+  font-size: $base-font-size * 2
+  line-height: $base-line-height * 2
+
+/*
+  # section#bootstrap
+  セクション内にあるdivのbgcolorを一括で設定
+  */
+
+section#bootstrap
+  div
+    background-color: rgba($secondary-background-color, .5)
