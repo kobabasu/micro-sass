@@ -1,0 +1,53 @@
+/*
+  # pages/top_sp.sass
+  index.htmlのspに関するクラスを定義
+  prefixには`p-`を付与
+  */
+
+
+
+/*
+  # section#bootstrap
+  */
+
+@include media($mobile)
+  section#bootstrap
+    div
+      @include span-columns(2)
+      @include shift(1)
+      margin-bottom: $base-spacing
+
+/*
+  # section#animate
+  */
+
+@include media($mobile)
+  section#fontawesome
+    div
+      pre
+        @include span-columns(2)
+        @include shift()
+    a
+      display: block
+      margin: $base-spacing * 2
+
+/*
+  # section#utils
+  */
+
+@include media($mobile)
+  section#utils
+    div
+      @include span-columns(2)
+      @include shift(1)
+
+/*
+  # section#colors
+  */
+
+@include media($mobile)
+  section#colors
+    div
+      p
+        @include span-columns(1)
+        @include omega(4n)

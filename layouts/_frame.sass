@@ -1,5 +1,35 @@
 /*
   # layouts/frame.sass
-  /frameに関するクラスを定義
+  frameに関するクラスを定義
   prefixには`l-`を付与
   */
+
+
+/*
+  # header, footer, section
+  */
+
+header, footer, section
+  @include outer-container
+  margin-bottom: $base-spacing * 2
+
+/*
+  # section, footer
+  */
+
+section, footer
+  text-align: center
+
+/*
+  # header
+  */
+
+header
+  padding-top: $base-spacing
+  h1
+    @include span-columns(2)
+  nav
+    @include span-columns(10)
+    text-align: right
+    a
+      padding-right: $base-spacing

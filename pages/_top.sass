@@ -1,0 +1,66 @@
+/*
+  # pages/top.sass
+  index.htmlに関するクラスを定義
+  prefixには`p-`を付与
+  */
+
+
+/*
+  # section#bootstrap
+  */
+
+section#bootstrap
+  div
+    @include span-columns(3)
+
+/*
+  # section#animate
+  */
+
+section#animate
+  div
+    @include span-columns(4)
+    p
+      margin: 0 auto $base-spacing
+      width: $base-rem * 8
+      height: $base-rem * 8
+      line-height: $base-rem * 8
+
+/*
+  # section#fontawesome
+  */
+
+section#fontawesome
+  div
+    margin-bottom: $base-spacing * 2
+  a
+    display: inline-block
+    height: $base-spacing * 2
+    margin: 0 $base-spacing * 2
+
+/*
+  # section#utis
+  */
+
+section#utils
+  div
+    @include span-columns(4)
+    @include shift(4)
+
+/*
+  # section#colors
+  */
+
+section#colors
+  div
+    @include outer-container
+    margin-bottom: $base-spacing * 2
+    p
+      @include span-columns(2)
+      @include omega(6n)
+      height: $base-rem * 8
+      line-height: $base-rem * 8
+  a
+    display: inline-block
+    height: $base-spacing * 2
+    margin: 0 $base-spacing * 2
