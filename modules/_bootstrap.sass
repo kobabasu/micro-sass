@@ -1,0 +1,48 @@
+/*
+  # modules/bootstrap.sass
+  bootstrapの記述に合わせたクラスを定義
+  prefixはなし
+  */
+
+/*
+  # Alignment Classes
+  変数を定義。すべてのファイルで利用
+  */
+
+.text-left
+  text-align: left
+
+.text-center
+  text-align: center
+
+.text-right
+  text-align: right
+
+.text-justify
+  text-align: justify
+
+.text-nowrap
+  white-space: nowrap
+
+/*
+  # Headding Secondaly Text
+  h1 - h6内 .class内で.smallまたは<small>で
+  secondary textを設定
+  */
+
+h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small,
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
+.lead .small, .lead small
+  font-size: $heading-font-size * 0.8
+  line-height: $heading-line-height
+
+/*
+  # Lead Body Copy
+  headingと同様のfont-sizeを設定
+  rem基準値分のmargin-bottomを設定
+  */
+
+.lead
+  font-family: $heading-font-family
+  font-size: $heading-font-size
+  margin-bottom: $small-spacing
