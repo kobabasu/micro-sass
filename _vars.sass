@@ -1,0 +1,113 @@
+/*
+  # vars.sass
+  グローバルな変数を定義
+  */
+
+/*
+  # neat
+  responsiveの横幅とカラム数を設定
+  */
+
+$mobile-columns: 4
+$mobile: new-breakpoint(max-width 500px $mobile-columns)
+
+/*
+  # grid
+  $base-emはbourbonの$em-baseと共有 -> config.sass  
+  $base-remはgridの最小単位  
+  */
+
+$base-em:  $em-base
+$base-rem: 1rem
+
+/*
+  # font-family
+  遊ゴシックはieでのline-heightで  
+  違いがあるため見送りメイリオで統一  
+  遊書体はオプションで設定
+  font-family, font-size, line-heightは  
+  neatのgridによりvarsを反映
+  */
+
+$base-san-serif: 'Meiryo', arial, Helvetica, sans-serif
+$base-serif: 'HG明朝E', 'Hiragino Mincho ProN', 'Meiryo', serif
+
+$YuGothic-font-family: 'YuGothic', $base-san-serif
+$YuMincho-font-family: 'YuMincho', $base-serif
+
+$base-font-family: $base-san-serif
+$heading-font-family: $base-serif
+
+/*
+  # font-size
+  font-family, font-size, line-heightは  
+  neatのgridによりvarsを反映
+  */
+
+$base-font-size:        1.6rem
+$heading-font-size:     2rem
+
+/*
+  # line-height
+  font-family, font-size, line-heightは  
+  neatのgridによりvarsを反映
+  */
+
+$base-line-height:      3rem
+$heading-line-height:   3rem
+
+/*
+  # spacing
+  */
+
+$base-spacing:          $base-rem * 2
+$small-spacing:         $base-rem
+
+/*
+  # base color
+  */
+
+$base-color:            #000
+$base-color-reverse:    #000
+$base-color-link:       #428BCA
+$base-color-link-hover: darken($base-color-link, 15%)
+$base-border-color:     #000
+$base-background-color: #FFF
+$secondary-background-color: #EFEFEF
+
+$gray-darker:           lighten(#000, 13.5%)
+$gray-dark:             lighten(#000, 20%)
+$gray:                  lighten(#000, 33.5%)
+$gray-light:            lighten(#000, 46.7%)
+$gray-lighter:          lighten(#000, 93.5%)
+
+$brand-primary:         #337AB7
+$brand-success:         #5CB85C
+$brand-info   :         #5BC0DE
+$brand-warning:         #F0AD4E
+$brand-danger :         #D9534F
+
+$color-white:           #FFF
+$color-black:           #000
+
+
+
+/*
+  # border
+  */
+
+$base-border: 1px solid $base-border-color
+$base-border-radius: 3px
+
+/*
+  # animation
+  */
+
+$base-duration:         150ms
+$base-timing:           ease
+
+/*
+  # z-index
+  */
+
+$base-z-index: 0
