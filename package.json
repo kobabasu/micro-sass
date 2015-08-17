@@ -27,7 +27,7 @@
     "start": "NODE_ENV=production NODE_PATH=",
     "sass": "sass --no-cache --sourcemap=file ./style.sass:../css/style.css",
     "watch:sass": "sass --no-cache --sourcemap=file -w ./style.sass:sample/css/style.css",
-    "doc:sass": "styledocco -n 'css reference' -o ../docs/sass --preprocessor 'sass' ./*.sass ./**/*.sass",
+    "doc:sass": "styledocco -n 'css reference' -o ../docs/sass --preprocessor 'sass' ./*.sass ./**/*.sass ./*.scss",
     "build": "npm run sass; npm run doc:sass"
   },
   "preferGlobal": true,
