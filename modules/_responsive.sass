@@ -1,0 +1,15 @@
+/*
+  # modules/responsive.sass
+  responsiveで使うクラスを定義
+  */
+
+
+.onlysp
+  display: none
+
+@include media($mobile)
+  .onlysp
+    display: block
+
+  .onlypc
+    display: none

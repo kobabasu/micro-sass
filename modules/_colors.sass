@@ -1,0 +1,16 @@
+/*
+  # modules/colors.sass
+  colorに関するクラスを定義
+  */
+
+
+@each $key, $val in $colors
+  .color-#{$key}
+    color: $val
+
+  .bgcolor-#{$key}
+    color: invert($val)
+    background-color: $val
+
+  .bordercolor-#{$key}
+    border-color: $val
