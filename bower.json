@@ -2,11 +2,10 @@
   "name": "sass-app",
   "version": "0.0.1",
   "dependencies": {
+    "normalize.css": null,
     "bourbon": null,
     "neat": null,
-    "bitters": null,
     "animate.css-scss": null,
     "font-awesome": null
   }
 }
-
