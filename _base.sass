@@ -1,35 +1,47 @@
 /*
   # base.sass
   要素に影響を与えるスタイルを定義
-  normalizeはbitterで代用
-  aのoutline, imgのmax-width含む
   */
 
 
 /*
   # html
-  marginを0にする 
+  remの基準値を設定
   */
 
-html, body
-  margin: 0
+html
+  font-size: $em-base
 
 /*
   # body
-  webkitのアンチエイリアスをon  
-  font-weightはnormalを指定しておく
+  z-indexに予め0を設定
+  color, bgcolorのvarsの値を反映
+  animate.cssでもmargin, paddingを0にしている
+  font-family, font-size, line-heightは  
+  neatのgridによりvarsを反映
   */
 
 body
-  font-weight: normal
-  z-index: 0
+  margin: 0
+  padding: 0
+  color: $base-color
+  background-color: $base-background-color
+  z-index: $base-z-index
 
 /*
-  # i
-   font-awesome用設定
+  # Heading
+  font-weightをnormal
   */
 
-i
-  font-size: 100%
-  font-family: FontAwesome
-  font-style: normal
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+  padding: 0
+  font-weight: normal
+
+/*
+  # anchor
+  下線を消す
+  */
+
+a
+  text-decoration: none
