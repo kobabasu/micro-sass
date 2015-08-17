@@ -1,8 +1,16 @@
 /*
   # modules/colors.sass
-  colorに関するクラスを定義
+  colorに関するクラスを定義  
+  _arrays.sassで設定
   */
 
+/*
+  # colors
+  以下に展開  
+  * .color-{カラー名}
+  * .bgcolor-{カラー名}
+  * .bordercolor-{カラー名}
+  */
 
 @each $key, $val in $colors
   .color-#{$key}

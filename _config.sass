@@ -12,14 +12,18 @@ $disable-warnings: true
 
 /*
   # bourbon
-  sassのwarningを抑制
+  remの基準値を設定
+  vars.sass内で読込  
+  vars.sass内でbase-emをエイリアスとして設定
   */
 
 $em-base: 10px
 
 /*
   # neat
-  sassのwarningを抑制
+  neatの設定  
+  visual-gridは縦のgridを表示する設定  
+  gridを消す場合は$visual-gridをfalseに
   */
 
 $max-width: 960px
@@ -30,7 +34,7 @@ $visual-grid-opacity: 0.4
 
 /*
   # font-awesome
-  fontawesomeの設定
+  fontawesomeのパスの設定
   */
 
 $fa-font-path: '/sass/vendor/font-awesome/fonts'

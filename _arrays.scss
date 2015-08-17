@@ -3,6 +3,11 @@
   グローバルな配列を定義  
   ソースコード内で改行が使えないため  
   このファイルのみscss
+  modules/_colors.sassで以下に展開
+
+  * .color-{カラー名}
+  * .bgcolor-{カラー名}
+  * .bordercolor-{カラー名}
   */
 
 $colors: (
