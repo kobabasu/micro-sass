@@ -1,7 +1,34 @@
 /*
   # modules/index.sass
-  modulesディレクトリ内で利用するファイルをリストアップ  
+  modulesディレクトリ内で利用するファイルをリストアップ 
   このファイルを経由しstyle.sassに読込
   
   rule系以外でこのmodulesだけがprefixがない
   */
+
+/*
+  # debug
+   ライブラリをカスタマイズまたはoverride
+  */
+
+@import 'neat'
+@import 'bootstrap'
+@import 'fontawesome'
+
+/*
+  # modules
+  各モジュールを読込
+  */
+
+@import 'grid'
+@import 'typography'
+@import 'colors'
+@import 'anchor'
+@import 'responsive'
+
+/*
+  # debug
+   debug用設定
+  */
+
+@import 'debug'
