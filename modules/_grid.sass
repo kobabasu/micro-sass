@@ -34,3 +34,18 @@ header > h1:first-child
 p
   line-height: $base-line-height / 3 * 2
   margin-bottom: $base-spacing
+
+/*
+  # table
+  borderを加えるとheightがずれるため  
+  before, afterでpxを調整
+  */
+
+th::before, td::before, th::after, td::after
+  content: ''
+
+th::before, td::before
+  vertical-align: -3px
+
+th::after, td::after
+  vertical-align: 6px
