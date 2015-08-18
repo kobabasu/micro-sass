@@ -15,12 +15,15 @@ body
 
 /*
   # heading
-  1行分のmargin-bottomを設定
+  headerのh1以外は1行分のmargin-bottomを設定
   */
 
 h1, h2, h3, h4, h5, h6 
   line-height: $heading-line-height
   margin-bottom: $base-spacing
+
+header > h1:first-child
+  margin-bottom: 0
 
 /*
   # paragraph
