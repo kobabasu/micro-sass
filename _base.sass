@@ -3,6 +3,28 @@
   要素に影響を与えるスタイルを定義
   */
 
+/*
+  # reset
+  html5用のreset.cssから引用  
+  body, tableなどはnormalize.css
+  sectionタグなどは削除
+  */
+
+body, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+  vertical-align: baseline
+  background: transparent
 
 /*
   # html
@@ -22,8 +44,6 @@ html
   */
 
 body
-  margin: 0
-  padding: 0
   color: $base-color
   background-color: $base-background-color
   z-index: $base-z-index
@@ -34,8 +54,6 @@ body
   */
 
 h1, h2, h3, h4, h5, h6, p
-  margin: 0
-  padding: 0
   font-weight: normal
 
 /*
@@ -45,3 +63,22 @@ h1, h2, h3, h4, h5, h6, p
 
 a
   text-decoration: none
+
+/*
+  # list
+  装飾を消す
+  */
+
+li
+  list-style-type: none
+
+/*
+  # table
+  border-spacing, border-collapseはnormalize.cssで設定
+  thのデフォルトを打ち消し
+  */
+
+table
+  th
+    text-align: left
+    font-weight: normal
