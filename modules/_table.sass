@@ -6,12 +6,18 @@
 
 table
   width: 100%
-  font-size: $base-font-size * 0.9
 
-tr
-  th
-    border-top: 1px solid $gray
-    border-bottom: 1px solid $gray
-    background-color: $gray-lighter
-  td
-    border-bottom: 1px solid $gray-light
+/*
+  # .sheet
+  一覧表のようなスタイルを提供
+  */
+
+table.sheet
+  font-size: $small-font-size
+  tr
+    th
+      border-top: $base-border
+      border-bottom: $base-border
+      background-color: $secondary-background-color
+    td
+      border-bottom: $base-border
