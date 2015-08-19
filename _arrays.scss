@@ -36,9 +36,14 @@ $colors: (
   'brand-warning':  $brand-warning,
   'brand-danger':   $brand-danger,
 
-  'corp':           $color-corp,
-  'corp-text':      $color-corp-text,
-  'corp-bg':        $color-corp-bg,
+  'corp':           $corp-color,
+  'corp-text':      $corp-color-text,
+  'corp-bg':        $corp-color-bg,
+
+  'form-border':    $form-border-color,
+  'form-required':  $form-color-required,
+  'form-note':      $from-color-note,
+  'form-bg':        $form-bg,
 
   'white':          $color-white,
   'black':          $color-black,
@@ -60,10 +65,10 @@ $colors: (
   */
 
 $widths: (
-  'xs':  '5%',
-  's':   '20%',
-  'm':   '30%',
-  'l':   '50%',
-  'xl':  '70%',
-  'f':   '100%',
+  'xs':  10%,
+  's':   30%,
+  'm':   40%,
+  'l':   70%,
+  'xl':  80%,
+  'f':   100%,
 )
