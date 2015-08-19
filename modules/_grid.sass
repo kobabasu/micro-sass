@@ -32,20 +32,37 @@ header > h1:first-child
   */
 
 p
-  line-height: $base-line-height / 3 * 2
+  line-height: $small-line-height
   margin-bottom: $base-spacing
 
 /*
   # table
+  line-heightはpと同じ高さ  
+  最後にmargin-bottomを1行分設定  
+  th, tdには上下paddingを加える  
   borderを加えるとheightがずれるため  
   before, afterでpxを調整
   */
 
+table
+  line-height: $small-line-height
+  margin-bottom: $base-spacing
+
+th, td
+  padding-top: $small-spacing
+  padding-bottom: $small-spacing
+
 th::before, td::before, th::after, td::after
   content: ''
 
-th::before, td::before
+th::before
   vertical-align: -3px
 
-th::after, td::after
+th::after
+  vertical-align: 5px
+
+td::before
+  vertical-align: -3px
+
+td::after
   vertical-align: 6px
