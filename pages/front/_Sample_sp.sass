@@ -4,14 +4,13 @@
   prefixには`pf-Sample`を付与
   */
 
+/*
+  # header
+  spは4:4のカラムで中央揃え
+  各リンクは縦並び
+  */
+
 #Sample
-
-  /*
-    # header
-    spは4:4のカラムで中央揃え
-    各リンクは縦並び
-    */
-
   @include media($mobile)
     header
       h1
@@ -24,12 +23,13 @@
           display: block
           padding-right: 0
 
-  /*
-    # section#bootstrap
-    2カラムとなるように設定  
-    bottomに一行分追加
-    */
+/*
+  # section#bootstrap
+  2カラムとなるように設定  
+  bottomに一行分追加
+  */
 
+#Sample
   @include media($mobile)
     section#bootstrap
       div
@@ -37,13 +37,14 @@
         @include shift(1)
         margin-bottom: $base-spacing
 
-  /*
-    # section#animate
-    2カラムとなるように設定  
-    縦並びに変更  
-    bottomに一行分追加
-    */
+/*
+  # section#animate
+  2カラムとなるように設定  
+  縦並びに変更  
+  bottomに一行分追加
+  */
 
+#Sample
   @include media($mobile)
     section#fontawesome
       div
@@ -54,22 +55,24 @@
         display: block
         margin: $base-spacing * 2
 
-  /*
-    # section#utils
-    2カラムとなるように設定
-    */
+/*
+  # section#utils
+  2カラムとなるように設定
+  */
 
+#Sample
   @include media($mobile)
     section#utils
       div
         @include span-columns(2)
         @include shift(1)
 
-  /*
-    # section#colors
-    1の4並びとなるように設定
-    */
+/*
+  # section#colors
+  1の4並びとなるように設定
+  */
 
+#Sample
   @include media($mobile)
     section#colors
       div
