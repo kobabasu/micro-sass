@@ -4,13 +4,6 @@
   prefixはなし
   */
 
-/*
-  # label
-  右側にpaddingに設定
-  */
-
-label
-  padding-right: $small-spacing
 
 /*
   # form内のパーツ
@@ -29,6 +22,11 @@ form
   input:last-child, select:last-child,
   textarea:last-child, button:last-child
     margin-right: 0
+
+/*
+  # select[multiple], textarea
+  内側にpaddingを設定
+  */
 
 select[multiple], textarea
   padding: $small-spacing / 2
@@ -54,3 +52,32 @@ button
   color: $color-white
   background-color: $base-color-button
   border: none
+
+/*
+  # label
+  右側にpaddingに設定
+  */
+
+label
+  padding-right: $small-spacing
+
+/*
+  # p
+  pタグを説明文用に利用
+  paddingは合計small-spacingを設定
+  */
+
+form p
+  margin-bottom: $small-spacing
+
+/*
+  # small
+  smallタグを注釈用に利用
+  色はvarsよりbrand-dangerをデフォルト
+  paddingは合計small-spacingを設定
+  */
+
+form small
+  display: block
+  color: $brand-danger
+  padding: $small-spacing / 2
