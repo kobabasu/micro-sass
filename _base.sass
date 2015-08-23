@@ -1,21 +1,23 @@
 /*
   # base.sass
   要素に影響を与えるスタイルを定義
+  animate.cssでもmargin, paddingを0にしている  
+  font-family, font-size, line-heightは 
+  neatのgridによりvarsを反映
   */
 
 /*
   # reset
   html5用のreset.cssから引用  
   body, tableなどはnormalize.css
-  sectionタグなどは削除
+  section elementsは削除
   */
 
 body, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
+small, strong, sub, sup, var, b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 time, mark, audio, video
@@ -24,6 +26,7 @@ time, mark, audio, video
   border: 0
   outline: 0
   vertical-align: baseline
+  font-weight: normal
   background: transparent
 
 /*
@@ -38,9 +41,6 @@ html
   # body
   z-indexに予め0を設定  
   color, bgcolorのvarsの値を反映  
-  animate.cssでもmargin, paddingを0にしている  
-  font-family, font-size, line-heightは 
-  neatのgridによりvarsを反映
   */
 
 body
@@ -49,12 +49,12 @@ body
   z-index: $base-z-index
 
 /*
-  # Heading
-  font-weightをnormal
+  # section elements
+  overflowをvisibleに設定
   */
 
-h1, h2, h3, h4, h5, h6, p
-  font-weight: normal
+header, footer, section, article, nav, aside
+  overflow: visible
 
 /*
   # anchor
@@ -74,30 +74,25 @@ li
 
 /*
   # table
-  border-spacing, border-collapseはnormalize.cssで設定
-  thのデフォルトを打ち消し
+  widthを100%に  
   */
 
 table
+  width: 100%
   th
-    text-align: left
     font-weight: normal
+    text-align: left
 
 /*
   # description list
-  左寄せ、vertical-alignをtop
+  table layoutにし左寄せ
   */
-
-dl, dt, dd
-  text-align: left
-  vertical-align: top
 
 dl
   display: table
   width: 100%
 
-dt
+dt, dd
   display: table-cell
-
-dd
-  display: table-cell
+  vertical-align: top
+  text-align: left
