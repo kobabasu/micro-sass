@@ -37,11 +37,10 @@
   secondary textを設定
   */
 
-h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small,
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
-.lead .small, .lead small
-  font-size: $heading-font-size * 0.8
-  line-height: $heading-line-height
+h1, h2, h3, h4, h5, h6
+  small, .small, .lead small, .lead .small
+    font-size: $small-font-size
+    line-height: $heading-line-height
 
 /*
   # Lead Body Copy
