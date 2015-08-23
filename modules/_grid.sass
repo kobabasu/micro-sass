@@ -46,6 +46,14 @@ p
   margin-bottom: $base-spacing
 
 /*
+  # small
+  smallのline-heightを設定 
+  */
+
+small
+  line-height: $small-line-height
+
+/*
   # table
   line-heightはpと同じ高さ  
   最後にmargin-bottomを1行分設定  
@@ -97,11 +105,15 @@ select[multiple], textarea
 
 /*
   # Description List
+  marginを設定  
   line-heightを設定
   */
 
 dl
   margin-bottom: $base-spacing * 2
+
+dt
+  line-height: $base-line-height
 
 dd > p
   margin-top: $small-spacing / 2
