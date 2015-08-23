@@ -15,19 +15,89 @@ body
 
 /*
   # heading
-  1行分のmargin-bottomを設定
+  headerのh1以外は1行分のmargin-bottomを設定  
+  セクションエレメンツの最初のh1はbase-spacing
   */
 
 h1, h2, h3, h4, h5, h6 
   line-height: $heading-line-height
   margin-bottom: $base-spacing
 
+header[id] > h1,
+footer[id] > h1,
+section[id] > h1,
+article[id] > h1
+  margin-bottom: $base-spacing
+
+/*
+  # section elements
+  margin-bottomに1行分のスペースを追加
+  */
+
+header, footer, section, article
+  margin-bottom: $base-spacing
+
 /*
   # paragraph
-  line-heightを2/3に設定
+  line-heightを2/3に設定  
   1行分のmargin-bottomを設定
   */
 
 p
-  line-height: $base-line-height / 3 * 2
+  line-height: $small-line-height
   margin-bottom: $base-spacing
+
+/*
+  # table
+  line-heightはpと同じ高さ  
+  最後にmargin-bottomを1行分設定  
+  th, tdには上下paddingを加える  
+  borderを加えるとheightがずれるため  
+  before, afterでpxを調整
+  */
+
+table
+  line-height: $small-line-height
+  margin-bottom: $base-spacing
+
+th, td
+  padding-top: $small-spacing / 2
+  padding-bottom: $small-spacing / 2
+
+th::before, td::before, th::after, td::after
+  content: ''
+
+th::before
+  vertical-align: -3px
+
+th::after
+  vertical-align: 5px
+
+td::before
+  vertical-align: -3px
+
+td::after
+  vertical-align: 6px
+
+/*
+  # form
+  line-heightを設定
+  */
+
+form
+  margin-bottom: $base-spacing
+
+input, select, textarea, button
+  line-height: $base-line-height
+
+/*
+  # Description List
+  line-heightを設定
+  */
+
+dl
+  margin-bottom: $base-spacing * 2
+
+dd > p
+  margin-top: $small-spacing / 2
+  margin-bottom: $small-spacing / 2

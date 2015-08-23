@@ -1,0 +1,47 @@
+/*
+  # modules/form.sass
+  formに関するクラスを定義  
+  prefixはなし
+  */
+
+
+/*
+  # label
+  右側にpaddingに設定
+  */
+
+label
+  padding-right: $small-spacing
+
+/*
+  # form内のパーツ
+  右側にmarginを追加  
+  左右にpaddingを追加  
+  border, border-radiusはvarsの値を初期値として設定
+  */
+
+input, select, textarea, button
+  margin-right: $base-spacing
+  padding: 0 $small-spacing
+  border: 1px solid $form-border-color
+  border-radius: $form-border-radius
+
+/*
+  # select multiple
+  右側にpaddingを追加
+  高さを固定
+  */
+
+select[multiple]
+  margin-right: $small-spacing
+  height: $base-line-height * 6
+
+/*
+  # button
+  文字色は白で固定  
+  背景色のvarsの初期値を設定
+  */
+
+button
+  color: $color-white
+  background-color: $base-color-button

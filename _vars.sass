@@ -48,6 +48,7 @@ $heading-font-family: $base-serif
   */
 
 $base-font-size:        1.6rem
+$small-font-size:       1.4rem
 $heading-font-size:     2rem
 
 /*
@@ -57,6 +58,7 @@ $heading-font-size:     2rem
   */
 
 $base-line-height:      3rem
+$small-line-height:     2rem
 $heading-line-height:   3rem
 
 /*
@@ -74,25 +76,30 @@ $small-spacing:         $base-rem
   _array.sassでバリエーションを設定
   */
 
-$base-color:            #000
-$base-color-reverse:    #000
-$base-color-link:       #428BCA
-$base-color-link-hover: darken($base-color-link, 15%)
-$base-border-color:     #000
-$base-background-color: #FFF
-$secondary-background-color: #EFEFEF
-
-$gray-darker:           lighten(#000, 13.5%)
-$gray-dark:             lighten(#000, 20%)
-$gray:                  lighten(#000, 33.5%)
-$gray-light:            lighten(#000, 46.7%)
-$gray-lighter:          lighten(#000, 93.5%)
+$gray-darker:           lighten(#000, 33.5%)
+$gray-dark:             lighten(#000, 55%)
+$gray:                  lighten(#000, 80.5%)
+$gray-light:            lighten(#000, 87.7%)
+$gray-lighter:          lighten(#000, 97.5%)
 
 $brand-primary:         #337AB7
 $brand-success:         #5CB85C
 $brand-info   :         #5BC0DE
 $brand-warning:         #F0AD4E
 $brand-danger :         #D9534F
+
+$corp-color:            #008D9F
+$corp-color-secondary:  #002356
+$corp-background-color: #FFFEEE
+
+$base-color:            #000
+$base-color-reverse:    #000
+$base-color-link:       #428BCA
+$base-color-link-hover: darken($base-color-link, 15%)
+$base-color-button:     $brand-primary
+$base-border-color:     $gray
+$base-background-color: #FFF
+$secondary-background-color: $gray-lighter
 
 $color-white:           #FFF
 $color-black:           #000
@@ -104,6 +111,17 @@ $color-black:           #000
 
 $base-border: 1px solid $base-border-color
 $base-border-radius: 3px
+
+/*
+  # form
+  デフォルトのborderとborder-radiusを設定
+  */
+
+$form-border-color:     $base-border-color
+$form-border-radius:    $base-border-radius
+$form-bg:               $gray-lighter
+$form-color-required:   $brand-danger
+$form-color-note:       $brand-danger
 
 /*
   # animation

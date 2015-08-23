@@ -3,7 +3,12 @@
   グローバルな配列を定義  
   ソースコード内で改行が使えないため  
   このファイルのみscss
-  modules/_colors.sassで以下に展開
+  */
+
+
+/*
+  # colors
+  modules/_colors.sassで以下に展開  
 
   * .color-{カラー名}
   * .bgcolor-{カラー名}
@@ -15,6 +20,7 @@ $colors: (
   'base-reverse':   $base-color-reverse,
   'link':           $base-color-link,
   'link-hover':     $base-color-link-hover,
+  'button':         $base-color-button,
   'border':         $base-border-color,
   'bg':             $base-background-color,
   'bg-secondary':   $secondary-background-color,
@@ -27,9 +33,18 @@ $colors: (
 
   'brand-primary':  $brand-primary,
   'brand-success':  $brand-success,
-  'brand-info'   :  $brand-info,
+  'brand-info':     $brand-info,
   'brand-warning':  $brand-warning,
-  'brand-danger' :  $brand-danger,
+  'brand-danger':   $brand-danger,
+
+  'corp':           $corp-color,
+  'corp-text':      $corp-color-secondary,
+  'corp-bg':        $corp-background-color,
+
+  'form-border':    $form-border-color,
+  'form-required':  $form-color-required,
+  'form-note':      $form-color-note,
+  'form-bg':        $form-bg,
 
   'white':          $color-white,
   'black':          $color-black,
@@ -43,3 +58,18 @@ $colors: (
   'facebook':       #243897,
   'twitter':        #55ACEE
 );
+
+
+/*
+  # widths
+  modules/_widths.sassでクラスに展開  
+  */
+
+$widths: (
+  'xs':  10%,
+  's':   30%,
+  'm':   40%,
+  'l':   70%,
+  'xl':  80%,
+  'f':   100%,
+)
