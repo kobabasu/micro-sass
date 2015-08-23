@@ -37,8 +37,8 @@
   secondary textを設定
   */
 
-h1, h2, h3, h4, h5, h6
-  small, .small, .lead small, .lead .small
+h1, h2, h3, h4, h5, h6, .lead
+  small, .small
     font-size: $small-font-size
     line-height: $heading-line-height
 
@@ -51,4 +51,5 @@ h1, h2, h3, h4, h5, h6
 .lead
   font-family: $heading-font-family
   font-size: $heading-font-size
-  margin-bottom: $small-spacing
+  line-height: $heading-font-size * 2
+  margin-bottom: 0

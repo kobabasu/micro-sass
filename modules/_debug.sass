@@ -1,11 +1,8 @@
 /*
   # modules/debug.sass
   debugに関するクラスを定義
-  prefixはなし
-  */
-
-/*
-  # grid
+  prefixはなし  
+  
   'g'キーでグリッドの表示切り替えが可能
   以下のコードをhtmlに追加 
   ```
@@ -15,7 +12,32 @@
   ```
   */
 
-.grid
+/*
+  # html, body
+  helght: 100%にしてもスクロールすると  
+  背景がきれてしまうため  
+  html, bodyにmin-height  
+  bodyにposition: relativeを設定
+  */
+
+html, body
+  min-height: 100%
+
+body
+  position: relative
+
+/*
+  # grid
+  ::afterとz-indexで全面に表示  
+  */
+
+body.grid::after
+  content: ''
+  display: inline-block
+  position: absolute
+  top: 0
+  width: 100%
+  height: 100%
   background-image: linear-gradient(to bottom, cyan 1px, transparent 1px)
   background-position: 0 0
   background-repeat: repeat-y

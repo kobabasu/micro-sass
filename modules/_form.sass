@@ -6,14 +6,6 @@
 
 
 /*
-  # label
-  右側にpaddingに設定
-  */
-
-label
-  padding-right: $small-spacing
-
-/*
   # form内のパーツ
   右側にmarginを追加  
   左右にpaddingを追加  
@@ -26,22 +18,66 @@ input, select, textarea, button
   border: 1px solid $form-border-color
   border-radius: $form-border-radius
 
+form
+  input:last-child, select:last-child,
+  textarea:last-child, button:last-child
+    margin-right: 0
+
 /*
-  # select multiple
-  右側にpaddingを追加
-  高さを固定
+  # select[multiple], textarea
+  内側にpaddingを設定
   */
 
-select[multiple]
-  margin-right: $small-spacing
-  height: $base-line-height * 6
+select[multiple], textarea
+  padding: $small-spacing / 2
+
+/*
+  # radio, checkbox
+  文字を中心にもっていくため  
+  vertical-alignを設定
+  */
+
+input[type=radio], input[type=checkbox]
+  vertical-align: middle
+  margin: 0 $small-spacing
 
 /*
   # button
   文字色は白で固定  
-  背景色のvarsの初期値を設定
+  背景色のvarsの初期値を設定  
+  borderはgridの関係でなし
   */
 
 button
   color: $color-white
   background-color: $base-color-button
+  border: none
+
+/*
+  # label
+  右側にpaddingに設定
+  */
+
+label
+  padding-right: $small-spacing
+
+/*
+  # p
+  pタグを説明文用に利用
+  paddingは合計small-spacingを設定
+  */
+
+form p
+  margin-bottom: $small-spacing
+
+/*
+  # small
+  smallタグを注釈用に利用
+  色はvarsよりbrand-dangerをデフォルト
+  paddingは合計small-spacingを設定
+  */
+
+form small
+  display: block
+  color: $brand-danger
+  padding: $small-spacing / 2

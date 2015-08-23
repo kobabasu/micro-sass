@@ -23,11 +23,19 @@
 
       <a href="#animate">
         <i class="fa fa-check-square-o"></i>
-        animate.css</a>
+        animate</a>
 
       <a href="#fontawesome">
         <i class="fa fa-check-square-o"></i>
-        font-awesome</a>
+        fontawesome</a>
+
+      <a href="#tables">
+        <i class="fa fa-check-square-o"></i>
+        tables</a>
+
+      <a href="#forms">
+        <i class="fa fa-check-square-o"></i>
+        forms</a>
 
       <a href="#utils">
         <i class="fa fa-check-square-o"></i>
@@ -36,6 +44,7 @@
       <a href="#colors">
         <i class="fa fa-check-square-o"></i>
         colors</a>
+
     </nav>
   </header>
 
@@ -190,6 +199,178 @@
     </div>
   </section>
 
+  <section id="tables">
+    <h1>Tables</h1>
+
+    <p class="lead">table .sheet</p>
+    <p>- without vertical line -</p>
+
+    <table class="sheet">
+      <tr>
+        <th class="text-center">th.text-center</th>
+        <th class="text-center">th.text-center</th>
+      </tr>
+      <tr>
+        <td>td</td>
+        <td>td</td>
+      </tr>
+    </table>
+
+    <p class="lead">table .chart</p>
+    <p>- with vertical line -</p>
+
+    <table class="chart">
+      <tr>
+        <th class="text-center">th.text-center</th>
+        <th class="text-center">th.text-center</th>
+      </tr>
+      <tr>
+        <td>td</td>
+        <td>td</td>
+      </tr>
+    </table>
+
+    <p class="lead">div .table</p>
+    <p>- for using table layout -</p>
+
+    <div class="table">
+      <div>
+        <table class="chart">
+          <tr>
+            <th class="text-center">th.text-center</th>
+            <th class="text-center">th.text-center</th>
+          </tr>
+          <tr>
+            <td>td</td>
+            <td>td</td>
+          </tr>
+        </table>
+      </div>
+
+      <div>
+        <table class="chart">
+          <tr>
+            <th class="text-center">th.text-center</th>
+            <th class="text-center">th.text-center</th>
+          </tr>
+          <tr>
+            <td>td</td>
+            <td>td</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="forms">
+    <h1>Forms</h1>
+
+      <p class="lead">Input Text</p>
+      <p>- text &lt;input type="text" /&gt; -</p>
+
+      <div>
+        <form action="/">
+          text <input type="text" />
+          text <input type="text" />
+        </form>
+      </div>
+
+      <p class="lead">Input Radio Button</p>
+      <p>- text &lt;input type="radio" /&gt; -</p>
+
+      <div>
+        <form action="/">
+          text <input name="sample" type="radio" />
+          text <input name="sample" type="radio" />
+        </form>
+      </div>
+
+      <p class="lead">Input Checkbox</p>
+      <p>- text &lt;input type="checkbox" /&gt; -</p>
+
+      <div>
+        <form action="/">
+          text <input name="sample" type="checkbox" />
+          text <input name="sample" type="checkbox" />
+        </form>
+      </div>
+
+      <p class="lead">Select</p>
+      <p>- &lt;select&gt; -</p>
+
+      <div>
+        <form action="/">
+          <select>
+            <option value="1">option first</option>
+            <option value="2">option second</option>
+            <option value="3">option last</option>
+          </select>
+        </form>
+      </div>
+
+      <p class="lead">Textarea</p>
+      <p>- &lt;textarea&gt; -</p>
+
+      <div>
+        <form action="/">
+          <textarea cols="40"></textarea>
+        </form>
+      </div>
+
+      <p class="lead">Select Multiple</p>
+      <p>- &lt;select multiple&gt; -</p>
+
+      <div>
+        <form action="/">
+          <select multiple>
+            <option value="1">option first</option>
+            <option value="2">option second</option>
+            <option value="3">option last</option>
+          </select>
+        </form>
+      </div>
+
+      <p class="lead">Button</p>
+      <p>- &lt;button&gt; -</p>
+
+      <div>
+        <form action="/">
+          <button>confirm</button>
+          <button>complete send</button>
+        </form>
+      </div>
+
+      <p class="lead">Label</p>
+      <p>- &lt;label&gt;text&lt;/label&gt; -</p>
+
+      <div>
+        <form action="/">
+          <label>text</label>
+          <input type="text" />
+        </form>
+      </div>
+
+      <p class="lead">Texts</p>
+      <p>- &lt;p&gt; -</p>
+
+      <div>
+        <form action="/">
+          <p>sample text</p>
+          <input type="text" />
+        </form>
+      </div>
+
+      <p class="lead">Notes</p>
+      <p>- &lt;small&gt; -</p>
+
+      <div>
+        <form action="/">
+          <input type="text" />
+          <small>* notes: sample text</small>
+        </form>
+      </div>
+  </section>
+
   <section id="utils">
     <h1>Utils</h1>
 
@@ -211,6 +392,7 @@
         Blanditiis dignissimos corrupti quam repellendus iure facilis!
       </p>
     </div>
+
   </section>
 
   <section id="colors">
@@ -223,6 +405,7 @@
       <p class="bgcolor-base-reverse">base-reverse</p>
       <p class="bgcolor-link">link</p>
       <p class="bgcolor-link-hover">link-hover</p>
+      <p class="bgcolor-button">button</p>
       <p class="bgcolor-border">border</p>
       <p class="bgcolor-bg">bg</p>
       <p class="bgcolor-bg-secondary">bg-secondary</p>
@@ -254,6 +437,15 @@
       <p class="bgcolor-brand-info">brand-info</p>
       <p class="bgcolor-brand-warning">brand-warning</p>
       <p class="bgcolor-brand-danger">brand-danger</p>
+    </div>
+
+    <p class="lead">Corporation colors</p>
+    <p>- set in _vars.sass -</p>
+
+    <div>
+      <p class="bgcolor-corp">corp</p>
+      <p class="bgcolor-corp-text">corp-text</p>
+      <p class="bgcolor-corp-bg">corp-bg</p>
     </div>
 
     <p class="lead">Common colors</p>

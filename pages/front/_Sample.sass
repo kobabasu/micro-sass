@@ -4,24 +4,25 @@
   prefixには`pf-Sample`を付与
   */
 
+
+/*
+  # header, footer, section
+  margin-bottomに1行分のスペースを追加
+  */
+
 #Sample
-
-  /*
-    # header, footer, section
-    margin-bottomに1行分のスペースを追加
-    */
-
   header, footer, section
     @include outer-container
     margin-bottom: $base-spacing * 2
 
-  /*
-    # header
-    ヘッダの先頭に一行分のスペースを加える  
-    2:10のカラム navは右揃え
-    navの右にパディングを追加
-    */
+/*
+  # header
+  ヘッダの先頭に一行分のスペースを加える  
+  2:10のカラム navは右揃え
+  navの右にパディングを追加
+  */
 
+#Sample
   header
     padding-top: $base-spacing
     h1
@@ -31,30 +32,35 @@
       text-align: right
       a
         padding-right: $base-spacing
+        &:last-child
+          padding-right: 0
 
-  /*
-    # section, footer
-    section, footerはデフォルトで中央揃え
-    */
+/*
+  # section, footer
+  section, footerはデフォルトで中央揃え
+  */
 
+#Sample
   section, footer
     text-align: center
 
-  /*
-    # section#bootstrap
-    Alignment Class用にdivを3で横並び
-    */
+/*
+  # section#bootstrap
+  Alignment Class用にdivを3で横並び
+  */
 
+#Sample
   section#bootstrap
     div
       @include span-columns(3)
 
-  /*
-    # section#animate
-    animate.cssサンプル用にdivを4で横並び
-    width, heightを指定しboxをつける
-    */
+/*
+  # section#animate
+  animate.cssサンプル用にdivを4で横並び
+  width, heightを指定しboxをつける
+  */
 
+#Sample
   section#animate
     div
       @include span-columns(4)
@@ -64,11 +70,12 @@
         height: $base-rem * 8
         line-height: $base-rem * 8
 
-  /*
-    # section#fontawesome
-    fa-stackがgridにあわないためaにheightを指定
-    */
+/*
+  # section#fontawesome
+  fa-stackがgridにあわないためaにheightを指定
+  */
 
+#Sample
   section#fontawesome
     div
       margin-bottom: $base-spacing * 2
@@ -77,22 +84,24 @@
       height: $base-spacing * 2
       margin: 0 $base-spacing * 2
 
-  /*
-    # section#utis
-    onlypc, onlyspのためにdivを4で用意
-    */
+/*
+  # section#utils
+  onlypc, onlyspのためにdivを4で用意
+  */
 
+#Sample
   section#utils
     div
       @include span-columns(4)
       @include shift(4)
 
-  /*
-    # section#colors
-    カラー用にboxを用意  
-    neatのautomatic rowで構成
-    */
+/*
+  # section#colors
+  カラー用にboxを用意  
+  neatのautomatic rowで構成
+  */
 
+#Sample
   section#colors
     div
       @include outer-container
