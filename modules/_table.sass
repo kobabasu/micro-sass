@@ -5,19 +5,43 @@
   */
 
 table
+  font-size: $small-font-size
+
+/*
+  # div.table
+  レイアウト目的で使用する
+  */
+
+div.table
+  display: table
+  table-layout: fixed
   width: 100%
+  & > div
+    display: table-cell
 
 /*
   # .sheet
-  一覧表のようなスタイルを提供
+  一覧スタイルを提供  
+  縦線なし
   */
 
 table.sheet
-  font-size: $small-font-size
-  tr
-    th
-      border-top: $base-border
-      border-bottom: $base-border
-      background-color: $secondary-background-color
-    td
-      border-bottom: $base-border
+  th
+    border-top: $base-border
+    border-bottom: $base-border
+    background-color: $secondary-background-color
+  td
+    border-bottom: $base-border
+
+/*
+  # .chart
+  表スタイルを提供  
+  縦線あり
+  */
+
+table.chart
+  th
+    border: $base-border
+    background-color: $secondary-background-color
+  td
+    border: $base-border
