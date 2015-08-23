@@ -1,9 +1,12 @@
 /*
   # pages/front/Sample.sass
   sass/sample/index.htmlに関するクラスを定義
+  max-widthは960pxに設定  
   prefixには`pf-Sample`を付与
   */
 
+#Sample
+  @include outer-container(960px)
 
 /*
   # header, footer, section
@@ -12,7 +15,6 @@
 
 #Sample
   header, footer, section
-    @include outer-container
     margin-bottom: $base-spacing * 2
 
 /*
