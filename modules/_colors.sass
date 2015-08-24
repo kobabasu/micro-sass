@@ -14,11 +14,11 @@
 
 @each $key, $val in $colors
   .color-#{$key}
-    color: $val
+    color: $val !important
 
   .bgcolor-#{$key}
-    color: invert($val)
-    background-color: $val
+    color: invert($val) !important
+    background-color: $val !important
 
   .bordercolor-#{$key}
-    border-color: $val
+    border-color: $val !important
