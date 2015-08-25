@@ -13,9 +13,39 @@ div#root
   @include outer-container
 
 /*
+  # section[id]
+  ページ全体にpaddingを設ける
+  */
+
+#Admin > section[id]
+  padding: $base-spacing
+
+/*
   # header, footer, section
   outer-containerを設定
   */
 
-header, footer, section
-  @include outer-container
+#Admin
+  header, footer, section
+    @include outer-container
+
+/*
+  # Headings
+  ゴシック体に変更
+  */
+
+#Admin
+  h1, h2, h3, h4, h5, h6
+    font-family: $base-san-serif
+
+/*
+  # table
+  theadのthのみ中央寄せ  
+  tdはデフォルトで右寄せ
+  */
+
+#admin table
+  thead th
+    text-align: center
+  td
+    text-align: right
