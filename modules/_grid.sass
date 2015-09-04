@@ -79,6 +79,8 @@ table:not(.cells) tr:last-child > th, td
   th, tdは引かずにそのままに戻し   
   親のtableが3px増えるため  
   最後のtdからは3px分引く
+  trやtableの構成によりgirdがずれる  
+  現時点では都度微調整する必要がある
   */
 
 table.cells
@@ -86,7 +88,7 @@ table.cells
     padding-bottom: $small-spacing / 2
   tr:last-child > td
     padding-top: $small-spacing / 2 - 0.1rem
-    padding-bottom: $small-spacing / 2 - 0.2rem
+    padding-bottom: $small-spacing / 2 - 0.1rem
 
 /*
   # form
