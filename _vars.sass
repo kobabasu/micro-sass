@@ -36,6 +36,8 @@ $base-rem: 1rem
 $base-san-serif: 'Meiryo', arial, Helvetica, sans-serif
 $base-serif: 'HG明朝E', 'Hiragino Mincho ProN', 'Meiryo', serif
 
+$corp-font-family: 'Hind', 'ヒラギノ明朝 ProN W6', 'HiraMinProN-W6', 'MS 明朝', 'MS-PMincho', serif
+
 $YuGothic-font-family: 'YuGothic', $base-san-serif
 $YuMincho-font-family: 'YuMincho', $base-serif
 
@@ -72,6 +74,17 @@ $heading-line-height:   3rem
 
 $base-spacing:          $base-rem * 2
 $small-spacing:         $base-rem
+
+/*
+  # letter-spacing
+  font-family, font-size, line-heightは  
+  modules/typographyでvarsを反映  
+  neatのgridによりvarsを反映
+  */
+
+$base-letter-spacing:      normal
+$small-letter-spacing:     0.2rem
+$heading-letter-spacing:   0.6rem
 
 /*
   # base color
