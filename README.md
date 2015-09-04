@@ -8,10 +8,9 @@ hub clone kobabasu/micro-sass sass
 ## npm
 1. 必要があればdevelopブランチを使う  
    `git checkout develop`
-1. package.json.sampleを確認。流用する場合はリネーム  
-   `mv package.json.sample package.json`
+1. package.jsonを確認  
 1. `npm install`
-1. `npm run build`
+1. `npm run build:sample` その他のnpm設定は通常のproject用
 
 ## check
 1. ブラウザで確認
@@ -20,7 +19,7 @@ hub clone kobabasu/micro-sass sass
 ## path
 * `_config.sass`内の$fa-font-pathを変更
 * `style.sass`内のvendorのパスを変更(`normalize.css`はcss読み込み用の変更)
-* package.jsonの`_watch:sass`のパスを変更
+* sample/index.htmlのパスを変更
 
 ## files
 ファイル構成は以下、
