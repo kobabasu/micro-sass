@@ -21,6 +21,15 @@ $base-em:  $em-base
 $base-rem: 1rem
 
 /*
+  # webfont
+  sass上でwebfontを読み込むmixinを使用   
+  sass-web-fonts  
+  読み込むフォントの設定
+  */
+
+@include web-fonts('Hind')
+
+/*
   # font-family
   遊ゴシックはieでのline-heightで  
   違いがあるため見送り。メイリオで統一  
