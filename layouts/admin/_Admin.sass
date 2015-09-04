@@ -6,19 +6,30 @@
   */
 
 /*
-  # div#root
+  # ready-Admin
+  主にflux用  
+  javascriptでbodyに後からidを追加している  
+  react-routerでbackground-colorなど  
+  pagesからbodyを制御したい場合に使用
+  */
+
+#ready-Admin
+  background-color: $corp-background-color
+
+/*
+  # #root
   react用のindex.htmlに記述されるdiv#rootの設定  
   */
 
-div#root
+#root
   @include outer-container
 
 /*
-  # section[id]
+  # article[id]
   ページ全体にpaddingを設ける
   */
 
-section#Admin > section[id]
+#Admin > article[id]
   padding: $base-spacing
 
 /*
@@ -26,7 +37,7 @@ section#Admin > section[id]
   outer-containerを設定
   */
 
-section#Admin
+#Admin
   header, footer, section
     @include outer-container
 
@@ -35,7 +46,7 @@ section#Admin
   ゴシック体に変更
   */
 
-section#Admin
+#Admin
   h1, h2, h3, h4, h5, h6
     font-family: $base-san-serif
 
@@ -45,7 +56,7 @@ section#Admin
   tdはデフォルトで右寄せ
   */
 
-section#admin table
+#admin table
   thead th
     text-align: center
   td
