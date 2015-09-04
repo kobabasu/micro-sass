@@ -10,7 +10,7 @@
   react用のindex.htmlに記述されるdiv#rootの設定  
   */
 
-div#root
+#root
   @include outer-container
 
 /*
@@ -18,7 +18,7 @@ div#root
   ページ全体にpaddingを設ける
   */
 
-section#Admin > section[id]
+#Admin > section[id]
   padding: $base-spacing
 
 /*
@@ -26,7 +26,7 @@ section#Admin > section[id]
   outer-containerを設定
   */
 
-section#Admin
+#Admin
   header, footer, section
     @include outer-container
 
@@ -35,7 +35,7 @@ section#Admin
   ゴシック体に変更
   */
 
-section#Admin
+#Admin
   h1, h2, h3, h4, h5, h6
     font-family: $base-san-serif
 
@@ -45,7 +45,7 @@ section#Admin
   tdはデフォルトで右寄せ
   */
 
-section#admin table
+#admin table
   thead th
     text-align: center
   td

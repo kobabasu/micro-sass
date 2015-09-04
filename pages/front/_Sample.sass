@@ -4,7 +4,7 @@
   prefixには`pf-Sample`を付与
   */
 
-div#Sample
+#Sample
   @include outer-container(960px)
 
 /*
@@ -12,7 +12,7 @@ div#Sample
   margin-bottomに1行分のスペースを追加
   */
 
-div#Sample
+#Sample
   header, footer, section
     @include outer-container
     margin-bottom: $base-spacing * 2
@@ -24,7 +24,7 @@ div#Sample
   navの右にパディングを追加
   */
 
-div#Sample
+#Sample
   header
     padding-top: $base-spacing
     h1
@@ -42,7 +42,7 @@ div#Sample
   section, footerはデフォルトで中央揃え
   */
 
-div#Sample
+#Sample
   section, footer
     text-align: center
 
@@ -51,8 +51,8 @@ div#Sample
   Alignment Class用にdivを3で横並び
   */
 
-div#Sample
-  section#bootstrap
+#Sample
+  #bootstrap
     div
       @include span-columns(3)
 
@@ -62,8 +62,8 @@ div#Sample
   width, heightを指定しboxをつける
   */
 
-div#Sample
-  section#animate
+#Sample
+  #animate
     div
       @include span-columns(4)
       p
@@ -77,8 +77,8 @@ div#Sample
   fa-stackがgridにあわないためaにheightを指定
   */
 
-div#Sample
-  section#fontawesome
+#Sample
+  #fontawesome
     div
       margin-bottom: $base-spacing * 2
     a
@@ -92,13 +92,13 @@ div#Sample
   widthのためにpをbox化
   */
 
-div#Sample
-  section#utils
-    section#responsive
+#Sample
+  #utils
+    #responsive
       div
         @include span-columns(4)
         @include shift(4)
-    section#widths
+    #widths
       text-align: center
       div span
         display: block
@@ -114,8 +114,8 @@ div#Sample
   neatのautomatic rowで構成
   */
 
-div#Sample
-  section#colors
+#Sample
+  #colors
     div
       @include outer-container
       margin-bottom: $base-spacing * 2
