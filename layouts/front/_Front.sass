@@ -1,15 +1,27 @@
 /*
   # layouts/front/Front.sass
   front/Front.jsxに関するクラスを定義  
+  section#Frontに関するクラスを定義  
   prefixには`lf-`を付与
   */
 
 /*
-  # div#root
+  # ready-Front
+  主にflux用  
+  javascriptでbodyに後からidを追加している  
+  react-routerでbackground-colorなど  
+  pagesからbodyを制御したい場合に使用
+  */
+
+#ready-Front
+  background-color: $corp-background-color
+
+/*
+  # #root
   react用のindex.htmlに記述されるdiv#rootの設定  
   */
 
-div#root
+#root
   @include outer-container
 
 /*

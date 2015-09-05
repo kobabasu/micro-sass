@@ -14,19 +14,29 @@ $mobile: new-breakpoint(max-width 500px $mobile-columns)
 /*
   # grid
   $base-emはbourbonの$em-baseと共有 -> config.sass  
-  $base-remはgridの最小単位  
+  $base-remはgridの最小単位
   */
 
 $base-em:  $em-base
 $base-rem: 1rem
 
 /*
+  # webfont
+  sass上でwebfontを読み込むmixinを使用   
+  sass-web-fonts  
+  読み込むフォントの設定
+  */
+
+@include web-fonts('Hind')
+
+/*
   # font-family
   遊ゴシックはieでのline-heightで  
   違いがあるため見送り。メイリオで統一  
-  遊書体はオプションで設定可能
+  遊書体はオプションで設定可能  
   font-family, font-size, line-heightは  
   neatのgridによりvarsを反映  
+  web-fontの読込は_config.sassで設定
   
   * $YuGothic-font-family - ゴシック体
   * $YuMincho-font-family - 明朝体
@@ -34,6 +44,8 @@ $base-rem: 1rem
 
 $base-san-serif: 'Meiryo', arial, Helvetica, sans-serif
 $base-serif: 'HG明朝E', 'Hiragino Mincho ProN', 'Meiryo', serif
+
+$corp-font-family: 'Hind', 'ヒラギノ明朝 ProN W6', 'HiraMinProN-W6', 'MS 明朝', 'MS-PMincho', serif
 
 $YuGothic-font-family: 'YuGothic', $base-san-serif
 $YuMincho-font-family: 'YuMincho', $base-serif
@@ -44,7 +56,8 @@ $heading-font-family: $base-serif
 /*
   # font-size
   font-family, font-size, line-heightは  
-  neatのgridによりvarsを反映
+  neatのgridによりvarsを反映  
+  modules/typographyでもvarsを反映
   */
 
 $base-font-size:        1.6rem
@@ -54,7 +67,8 @@ $heading-font-size:     2rem
 /*
   # line-height
   font-family, font-size, line-heightは  
-  neatのgridによりvarsを反映
+  neatのgridによりvarsを反映  
+  modules/typographyでもvarsを反映
   */
 
 $base-line-height:      3rem
@@ -69,6 +83,17 @@ $heading-line-height:   3rem
 
 $base-spacing:          $base-rem * 2
 $small-spacing:         $base-rem
+
+/*
+  # letter-spacing
+  font-family, font-size, line-heightは  
+  modules/typographyでvarsを反映  
+  neatのgridによりvarsを反映
+  */
+
+$base-letter-spacing:      normal
+$small-letter-spacing:     0.2rem
+$heading-letter-spacing:   0.6rem
 
 /*
   # base color

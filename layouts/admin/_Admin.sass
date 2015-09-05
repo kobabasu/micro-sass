@@ -1,21 +1,63 @@
 /*
   # layouts/admin/Admin.sass
   admin/Admin.jsxに関するクラスを定義  
+  section#Adminに関するクラスを定義  
   prefixには`la-`を付与
   */
 
 /*
-  # div#root
+  # ready-Admin
+  主にflux用  
+  javascriptでbodyに後からidを追加している  
+  react-routerでbackground-colorなど  
+  pagesからbodyを制御したい場合に使用
+  */
+
+#ready-Admin
+  background-color: $base-background-color
+
+/*
+  # #root
   react用のindex.htmlに記述されるdiv#rootの設定  
   */
 
-div#root
+#root
   @include outer-container
+
+/*
+  # article[id]
+  ページ全体にpaddingを設ける
+  */
+
+#Admin > article[id]
+  padding: $base-spacing
 
 /*
   # header, footer, section
   outer-containerを設定
   */
 
-header, footer, section
-  @include outer-container
+#Admin
+  header, footer, section
+    @include outer-container
+
+/*
+  # Headings
+  ゴシック体に変更
+  */
+
+#Admin
+  h1, h2, h3, h4, h5, h6
+    font-family: $base-san-serif
+
+/*
+  # table
+  theadのthのみ中央寄せ  
+  tdはデフォルトで右寄せ
+  */
+
+#admin table
+  thead th
+    text-align: center
+  td
+    text-align: right

@@ -13,7 +13,7 @@
   */
 
 input, select, textarea, button
-  margin-right: $base-spacing
+  margin-right: $small-spacing
   padding: 0 $small-spacing
   border: 1px solid $form-border-color
   border-radius: $form-border-radius
@@ -25,11 +25,24 @@ form
 
 /*
   # select[multiple], textarea
-  内側にpaddingを設定
+  内側にpaddingを設定  
+  line-heightはbaseだと大きすぎるため狭くする
   */
 
 select[multiple], textarea
+  line-height: $small-line-height
   padding: $small-spacing / 2
+
+/*
+  # select[multiple], textarea の高さ
+  高さをそれぞれ固定
+  */
+
+select[multiple]
+  height: $small-line-height * 6
+
+textarea
+  height: $small-line-height * 4
 
 /*
   # radio, checkbox
@@ -38,24 +51,27 @@ select[multiple], textarea
   */
 
 input[type=radio], input[type=checkbox]
-  vertical-align: middle
-  margin: 0 $small-spacing
+  vertical-align: -$small-spacing / 2
+  margin-left: $small-spacing
+  margin-right: $base-spacing
 
 /*
   # button
   文字色は白で固定  
   背景色のvarsの初期値を設定  
-  borderはgridの関係でなし
+  borderはgridの関係でなし  
+  font-sizeはsmall
   */
 
 button
+  font-size: $small-font-size
   color: $color-white
   background-color: $base-color-button
   border: none
 
 /*
   # label
-  右側にpaddingに設定
+  右側のpaddingを0に設定
   */
 
 label

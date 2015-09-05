@@ -24,21 +24,21 @@
           padding-right: 0
 
 /*
-  # section#bootstrap
+  # #bootstrap
   2カラムとなるように設定  
   bottomに一行分追加
   */
 
 #Sample
   @include media($mobile)
-    section#bootstrap
+    #bootstrap
       div
         @include span-columns(2)
         @include shift(1)
         margin-bottom: $base-spacing
 
 /*
-  # section#animate
+  # #animate
   2カラムとなるように設定  
   縦並びに変更  
   bottomに一行分追加
@@ -46,7 +46,7 @@
 
 #Sample
   @include media($mobile)
-    section#fontawesome
+    #fontawesome
       div
         pre
           @include span-columns(2)
@@ -56,26 +56,26 @@
         margin: $base-spacing * 2
 
 /*
-  # section#utils
+  # #utils
   2カラムとなるように設定
   */
 
 #Sample
   @include media($mobile)
-    section#utils
-      section#responsive
+    #utils
+      #responsive
         div
           @include span-columns(2)
           @include shift(1)
 
 /*
-  # section#colors
+  # #colors
   1の4並びとなるように設定
   */
 
 #Sample
   @include media($mobile)
-    section#colors
+    #colors
       div
         p
           @include span-columns(1)

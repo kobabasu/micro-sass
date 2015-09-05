@@ -4,11 +4,22 @@
   prefixはなし
   */
 
-table
+th, td
   font-size: $small-font-size
-  th, td
-    padding-left: $small-spacing
-    padding-right: $small-spacing
+  padding-left: $small-spacing
+  padding-right: $small-spacing
+
+/*
+  # caption
+  テーブルの表題は左寄せ
+  font-sizeはsmall  
+  line-heigthtはbaseを設定
+  */
+
+caption
+  font-size: $small-font-size
+  line-height: $base-line-height
+  text-align: left
 
 /*
   # div.table
@@ -18,7 +29,6 @@ table
 
 div.table
   display: table
-  table-layout: fixed
   width: 100%
   & > div
     display: table-cell
@@ -55,3 +65,8 @@ table.chart
     background-color: $secondary-background-color
   td
     border: $base-border
+
+/*
+  # .cells
+  modules/_grid.sassにて設定
+  */

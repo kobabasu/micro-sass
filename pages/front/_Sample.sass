@@ -47,23 +47,23 @@
     text-align: center
 
 /*
-  # section#bootstrap
+  # #bootstrap
   Alignment Class用にdivを3で横並び
   */
 
 #Sample
-  section#bootstrap
+  #bootstrap
     div
       @include span-columns(3)
 
 /*
-  # section#animate
+  # #animate
   animate.cssサンプル用にdivを4で横並び  
   width, heightを指定しboxをつける
   */
 
 #Sample
-  section#animate
+  #animate
     div
       @include span-columns(4)
       p
@@ -73,12 +73,12 @@
         line-height: $base-rem * 8
 
 /*
-  # section#fontawesome
+  # #fontawesome
   fa-stackがgridにあわないためaにheightを指定
   */
 
 #Sample
-  section#fontawesome
+  #fontawesome
     div
       margin-bottom: $base-spacing * 2
     a
@@ -87,18 +87,18 @@
       margin: 0 $base-spacing * 2
 
 /*
-  # section#utils
+  # #utils
   onlypc, onlyspのためにdivを4で用意  
   widthのためにpをbox化
   */
 
 #Sample
-  section#utils
-    section#responsive
+  #utils
+    #responsive
       div
         @include span-columns(4)
         @include shift(4)
-    section#widths
+    #widths
       text-align: center
       div span
         display: block
@@ -109,13 +109,13 @@
         background-color: $gray
 
 /*
-  # section#colors
+  # #colors
   カラー用にboxを用意  
   neatのautomatic rowで構成
   */
 
 #Sample
-  section#colors
+  #colors
     div
       @include outer-container
       margin-bottom: $base-spacing * 2

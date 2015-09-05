@@ -5,7 +5,7 @@
   <title>sass-app</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <link rel="stylesheet" href="/css/style.css" media="all">
+  <link rel="stylesheet" href="css/style.css" media="all">
   <base href="/" />
 </head>
 
@@ -13,43 +13,42 @@
   <div id="Sample">
     <header>
       <h1 id="title">Micro-sass</h1>
-    
+
       <nav>
         <a href="#heading">
           <i class="fa fa-check-square-o"></i>
           headding</a>
-    
+
         <a href="#bootstrap">
           <i class="fa fa-check-square-o"></i>
           bootstrap</a>
-    
+
         <a href="#animate">
           <i class="fa fa-check-square-o"></i>
           animate</a>
-    
+
         <a href="#fontawesome">
           <i class="fa fa-check-square-o"></i>
           fontawesome</a>
-    
+
         <a href="#tables">
           <i class="fa fa-check-square-o"></i>
           tables</a>
-    
+
         <a href="#forms">
           <i class="fa fa-check-square-o"></i>
           forms</a>
-    
+
         <a href="#utils">
           <i class="fa fa-check-square-o"></i>
           utils</a>
-    
+
         <a href="#colors">
           <i class="fa fa-check-square-o"></i>
           colors</a>
-    
       </nav>
     </header>
-    
+
     <section id="heading">
       <h1>Headings</h1>
       <h1>heading 1</h1>
@@ -59,10 +58,10 @@
       <h5>heading 5</h5>
       <h6>heading 6</h6>
     </section>
-    
+
     <section id="bootstrap">
       <h1>Compatible With Bootstrap.css</h1>
-    
+
       <p class="lead">
         Heading 
         <span class="small"> secondary text</span>
@@ -74,7 +73,7 @@
         Accusantium saepe saepe aliquid ratione consequatur eveniet at  <br />
         enim maiores ab placeat voluptatum deserunt sint.
       </p>
-    
+
       <p class="lead">Lead Body Copy</p>
       <p>- .lead -</p>
       <p>
@@ -83,7 +82,7 @@
         Accusantium saepe saepe aliquid ratione consequatur eveniet at  <br />
         enim maiores ab placeat voluptatum deserunt sint.
       </p>
-    
+
       <p class="lead">Alignment Class</p>
       <p>- text-{left, center, right, justify and nowrap} -</p>
       <div>
@@ -93,7 +92,7 @@
           Blanditiis dignissimos corrupti quam repellendus iure facilis!
         </p>
       </div>
-    
+
       <div>
         <span>.text-center</span>
         <p class="text-center">
@@ -101,7 +100,7 @@
           Blanditiis dignissimos corrupti quam repellendus iure facilis!
         </p>
       </div>
-    
+
       <div>
         <span>.text-right</span>
         <p class="text-right">
@@ -109,7 +108,7 @@
           Blanditiis dignissimos corrupti quam repellendus iure facilis!
         </p>
       </div>
-    
+
       <div>
         <span>.text-justify</span>
         <p class="text-justify">
@@ -118,7 +117,7 @@
         </p>
       </div>
     </section>
-    
+
     <section id="animate">
       <h1>Animate.css</h1>
       <div>
@@ -131,16 +130,16 @@
         <p class="tada bgcolor-brand-info">tada</p>
       </div>
     </section>
-    
+
     <section id="fontawesome">
       <h1>Font-Awesome</h1>
-    
+
       <p class="lead">Stacked Icon <small>Square</small></p>
       <p>- fa-stack fa-square-o -</p>
       <p>
         gridが合わないためheightを指定したelementでwrap
       </p>
-    
+
       <div>
         <a href="#heading" class="color-facebook">
           <span class="fa-stack fa-lg">
@@ -149,7 +148,7 @@
           </span>
           facebook
         </a>
-        
+
         <a href="#heading" class="color-twitter">
           <span class="fa-stack fa-lg">
             <i class="fa fa-square-o fa-stack-2x"></i>
@@ -157,7 +156,7 @@
           </span>
           twitter
         </a>
-        
+
         <a href="#heading" class="color-black">
           <span class="fa-stack fa-lg">
             <i class="fa fa-square-o fa-stack-2x"></i>
@@ -166,14 +165,14 @@
           github
         </a>
       </div>
-    
+
       <p class="lead">Stacked Icon <small>Circle</small></p>
       <p>- fa-stack fa-circle -</p>
       <p>
         gridが合わないためheightを指定したelementでwrap<br />
         circleは中心点が合わないためmodules/bootstrapで調整
       </p>
-    
+
       <div>
         <a href="#heading" class="color-facebook">
           <span class="fa-stack fa-lg">
@@ -182,7 +181,7 @@
           </span>
           facebook
         </a>
-        
+
         <a href="#heading" class="color-twitter">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
@@ -190,7 +189,7 @@
           </span>
           twitter
         </a>
-        
+
         <a href="#heading" class="color-black">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
@@ -200,13 +199,29 @@
         </a>
       </div>
     </section>
-    
+
     <section id="tables">
       <h1>Tables</h1>
-    
+
+      <p class="lead">table caption</p>
+      <p>- &lt;caption&gt; -</p>
+
+      <table class="chart">
+        <caption>this is caption</caption>
+        <tr>
+          <th class="text-center">th.text-center</th>
+          <th class="text-center">th.text-center</th>
+        </tr>
+        <tr>
+          <td>td</td>
+          <td>td</td>
+        </tr>
+      </table>
+
+
       <p class="lead">table .sheet</p>
       <p>- without vertical line -</p>
-    
+
       <table class="sheet">
         <tr>
           <th class="text-center">th.text-center</th>
@@ -217,10 +232,10 @@
           <td>td</td>
         </tr>
       </table>
-    
+
       <p class="lead">table .chart</p>
       <p>- with vertical line -</p>
-    
+
       <table class="chart">
         <tr>
           <th class="text-center">th.text-center</th>
@@ -231,10 +246,10 @@
           <td>td</td>
         </tr>
       </table>
-    
+
       <p class="lead">div .table</p>
       <p>- for using table layout -</p>
-    
+
       <div class="table">
         <div>
           <table class="chart">
@@ -248,7 +263,7 @@
             </tr>
           </table>
         </div>
-    
+
         <div>
           <table class="chart">
             <tr>
@@ -262,66 +277,81 @@
           </table>
         </div>
       </div>
+
+      <p class="lead">table .cells</p>
+      <p>- for table include rowspan, colspan -</p>
+
+      <table class="chart cells">
+        <tr>
+          <th rowspan="2" class="text-center">th.text-center</th>
+          <td colspan="2" >td</td>
+        </tr>
+        <tr>
+          <td>td</td>
+          <td>td</td>
+        </tr>
+      </table>
+
     </section>
-    
+
     <section id="forms">
       <h1>Forms</h1>
-    
+
         <p class="lead">Input Text</p>
         <p>- text &lt;input type="text" /&gt; -</p>
-    
+
         <div>
           <form action="/">
             text <input type="text" />
             text <input type="text" />
           </form>
         </div>
-    
+
         <p class="lead">Input Radio Button</p>
         <p>- text &lt;input type="radio" /&gt; -</p>
-    
+
         <div>
           <form action="/">
             text <input name="sample" type="radio" />
             text <input name="sample" type="radio" />
           </form>
         </div>
-    
+
         <p class="lead">Input Checkbox</p>
         <p>- text &lt;input type="checkbox" /&gt; -</p>
-    
+
         <div>
           <form action="/">
             text <input name="sample" type="checkbox" />
             text <input name="sample" type="checkbox" />
           </form>
         </div>
-    
+
         <p class="lead">Select</p>
-        <p>- &lt;select&gt; -</p>
-    
+        <p>- text &lt;select&gt; -</p>
+
         <div>
           <form action="/">
-            <select>
+            text <select>
               <option value="1">option first</option>
               <option value="2">option second</option>
               <option value="3">option last</option>
             </select>
           </form>
         </div>
-    
+
         <p class="lead">Textarea</p>
         <p>- &lt;textarea&gt; -</p>
-    
+
         <div>
           <form action="/">
             <textarea cols="40"></textarea>
           </form>
         </div>
-    
+
         <p class="lead">Select Multiple</p>
         <p>- &lt;select multiple&gt; -</p>
-    
+
         <div>
           <form action="/">
             <select multiple>
@@ -331,40 +361,40 @@
             </select>
           </form>
         </div>
-    
+
         <p class="lead">Button</p>
         <p>- &lt;button&gt; -</p>
-    
+
         <div>
           <form action="/">
             <button>confirm</button>
             <button>complete send</button>
           </form>
         </div>
-    
+
         <p class="lead">Label</p>
         <p>- &lt;label&gt;text&lt;/label&gt; -</p>
-    
+
         <div>
           <form action="/">
             <label>text</label>
             <input type="text" />
           </form>
         </div>
-    
+
         <p class="lead">Texts</p>
         <p>- &lt;p&gt; -</p>
-    
+
         <div>
           <form action="/">
             <p>sample text</p>
             <input type="text" />
           </form>
         </div>
-    
+
         <p class="lead">Notes</p>
         <p>- &lt;small&gt; -</p>
-    
+
         <div>
           <form action="/">
             <input type="text" style="margin-right: 0;" />
@@ -372,14 +402,14 @@
           </form>
         </div>
     </section>
-    
+
     <section id="utils">
       <h1>Utils</h1>
-    
+
       <section id="responsive">
         <p class="lead">Responsive</p>
         <p>- display .onlypc or .onlysp -</p>
-        
+
         <div class="onlypc">
           <span>display only pc</span>
           <p class="text-justify">
@@ -387,7 +417,7 @@
             Blanditiis dignissimos corrupti quam repellendus iure facilis!
           </p>
         </div>
-        
+
         <div class="onlysp">
           <span>display only sp</span>
           <p class="text-justify">
@@ -396,11 +426,11 @@
           </p>
         </div>
       </section>
-    
+
       <section id="widths">
         <p class="lead">Widths</p>
         <p>- .w-{xs, s, m, l, xl, f}  -</p>
-        
+
         <div>
           <span>1/12</span>
           <p class="w-xs">.w-xs</p>
@@ -416,14 +446,13 @@
           <p class="w-f">.w-f</p>
         </div>
       </section>
-    
     </section>
-    
+
     <section id="colors">
       <h1>Colors</h1>
       <p class="lead">Base Colors</p>
       <p>- set in _vars.sass -</p>
-    
+
       <div>
         <p class="bgcolor-base">base</p>
         <p class="bgcolor-base-reverse">base-reverse</p>
@@ -434,13 +463,13 @@
         <p class="bgcolor-bg">bg</p>
         <p class="bgcolor-bg-secondary">bg-secondary</p>
       </div>
-    
+
       <p class="lead">
         Gray Colors
         <small>compatible with bootstrap.css</small>
       </p>
       <p>- set in _vars.sass -</p>
-    
+
       <div>
         <p class="bgcolor-gray-darker">gray-darker</p>
         <p class="bgcolor-gray-dark">gray-dark</p>
@@ -448,13 +477,13 @@
         <p class="bgcolor-gray-light">gray-light</p>
         <p class="bgcolor-gray-lighter">gray-lighter</p>
       </div>
-    
+
       <p class="lead">
         Brand Colors
         <small>compatible with bootstrap.css</small>
       </p>
       <p>- set in _vars.sass -</p>
-    
+
       <div>
         <p class="bgcolor-brand-primary">brand-primary</p>
         <p class="bgcolor-brand-success">brand-success</p>
@@ -462,27 +491,27 @@
         <p class="bgcolor-brand-warning">brand-warning</p>
         <p class="bgcolor-brand-danger">brand-danger</p>
       </div>
-    
+
       <p class="lead">Corporation Colors</p>
       <p>- set in _vars.sass -</p>
-    
+
       <div>
         <p class="bgcolor-corp">corp</p>
         <p class="bgcolor-corp-text">corp-text</p>
         <p class="bgcolor-corp-bg">corp-bg</p>
       </div>
-    
+
       <p class="lead">Common Colors</p>
       <p>- set in _arrays.sass -</p>
-    
+
       <div>
         <p class="bgcolor-white">white</p>
         <p class="bgcolor-black">black</p>
       </div>
-    
+
       <p class="lead">Unique Colors</p>
       <p>- set in _arrays.sass -</p>
-    
+
       <div>
         <p class="bgcolor-blue">blue</p>
         <p class="bgcolor-skyblue">skyblue</p>
@@ -490,10 +519,10 @@
         <p class="bgcolor-paleblue">paleblue</p>
         <p class="bgcolor-darkblue">darkblue</p>
       </div>
-    
+
       <p class="lead">Brand Logo Colors</p>
       <p>- set in _arrays.sass -</p>
-    
+
       <div>
         <p class="bgcolor-facebook">Facebook</p>
         <p class="bgcolor-twitter">Twitter</p>

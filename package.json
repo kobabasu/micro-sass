@@ -25,12 +25,16 @@
   "scripts": {
     "preinstall": "npm install -g bower styledocco; bower install",
     "start": "NODE_ENV=production NODE_PATH=",
-    "sass": "sass --no-cache --sourcemap=file ./style.sass:../css/style.css",
-    "watch:sass": "sass --no-cache --sourcemap=file -w ./style.sass:sample/css/style.css",
-    "doc:sass": "styledocco -n 'micro-sass' -o ../docs/sass --preprocessor 'sass' ./*.sass ./*.scss ./**/*.sass",
-    "doc:pages": "styledocco -n 'pages' -o ../docs/pages --preprocessor 'sass' ./pages/*.sass ./pages/**/*.sass",
-    "doc:layouts": "styledocco -n 'layouts' -o ../docs/layouts --preprocessor 'sass' ./layouts/*.sass ./layouts/**/*.sass",
-    "build": "npm run sass; npm run doc:sass"
+
+    "sass": "sass --no-cache --sourcemap=file ./sass/style.sass:./css/style.css",
+    "watch:sass": "sass --no-cache --sourcemap=file -w ./sass/style.sass:./css/style.css",
+    "doc:sass": "styledocco -n 'micro-sass' -o ./docs/sass --preprocessor 'sass' ./sass/*.sass ./sass/*.scss ./sass/**/*.sass",
+    "doc:pages": "styledocco -n 'pages' -o ./docs/pages --preprocessor 'sass' ./sass/pages/*.sass ./sass/pages/**/*.sass",
+    "doc:layouts": "styledocco -n 'layouts' -o ./docs/layouts --preprocessor 'sass' ./sass/layouts/*.sass ./sass/layouts/**/*.sass",
+    "build:sass": "npm run sass; npm run doc:sass",
+
+    "build": "npm run sass; npm run doc:sass",
+    "build:sample": "sass --no-cache --sourcemap=file ./style.sass:sample/css/style.css"
   },
   "preferGlobal": true,
   "author": "kobabasu",
