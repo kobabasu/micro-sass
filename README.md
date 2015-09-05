@@ -21,6 +21,12 @@ hub clone kobabasu/micro-sass sass
 * `style.sass`内のvendorのパスを変更(`normalize.css`はcss読み込み用の変更)
 * sample/index.htmlのパスを変更
 
+## project
+* .bowerrc, bower.jsonの移動
+* package.jsonの編集
+* sass,css,docsディレクトリの作成
+* style.css, config.sassの編集
+
 ## files
 ファイル構成は以下、
 configs, base, lib, pages, layouts, modulesに別れる
