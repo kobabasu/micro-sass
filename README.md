@@ -2,13 +2,12 @@
 ruby-sassを利用するためruby環境とsassのインストールが必要
 
 ```
-hub clone kobabasu/micro-sass sass
+git clone git@github.com-kobabasu:kobabasu/micro-sass.git sass
 ```
 
 ## npm
 1. 必要があればdevelopブランチを使う  
    `git checkout develop`
-1. package.jsonを確認  
 1. `npm install`
 1. `npm run build:sample` その他のnpm設定は通常のproject用
 
@@ -26,6 +25,7 @@ hub clone kobabasu/micro-sass sass
 * package.jsonの編集
 * sass,css,docsディレクトリの作成
 * style.css, config.sassの編集
+* sass/sample/index.htmlのパスも編集しておく
 
 ## files
 ファイル構成は以下、
