@@ -4,6 +4,17 @@
   */
 
 /*
+  # document root
+  パス設定  
+  bowerのコンポーネントなどは  
+  scss,sassの読込には仕様上使えない  
+  css, imgなどの読込に利用  
+  最後にスラッシュはつけない
+  */
+
+$root: ""
+
+/*
   # config
   各ライブラリ用の環境設定
   */
@@ -15,11 +26,12 @@
   noramalizeはcssを読込
   */
 
-@import '../../vendor/normalize.css/normalize.css'
+@import '#{$root}/vendor/normalize.css/normalize.css'
 
 /*
   # vendor
-  bourbon, neat, animate, fontawesomeを読込
+  bourbon, neat, animate, fontawesomeを読込  
+  sass3.4の仕様上scss,sassの読込に変数は使えない  
   */
 
 @import './vendor/bourbon/app/assets/stylesheets/_bourbon.scss'
