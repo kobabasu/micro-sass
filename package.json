@@ -23,8 +23,8 @@
   "devDependencies": {
   },
   "scripts": {
-    "preinstall": "npm install -g bower styledocco; bower install",
-    "start": "NODE_ENV=production NODE_PATH=",
+    "preinstall": "cp ./{.bowerrc,bower.json} ../; mkdir ./{css,docs}; npm install -g bower styledocco; bower install",
+    "start": "NODE_ENV=production NODE_PATH=../",
 
     "sass": "sass --no-cache --sourcemap=file ./sass/style.sass:./css/style.css",
     "watch:sass": "sass --no-cache --sourcemap=file -w ./sass/style.sass:./css/style.css",
@@ -34,7 +34,7 @@
     "build:sass": "npm run sass; npm run doc:sass",
 
     "build": "npm run sass; npm run doc:sass",
-    "build:sample": "sass --no-cache --sourcemap=file ./style.sass:sample/css/style.css"
+    "build:sample": "sass --no-cache --sourcemap=file ./style.sass:../css/style.css"
   },
   "preferGlobal": true,
   "author": "kobabasu",
