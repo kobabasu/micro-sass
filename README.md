@@ -27,34 +27,35 @@ git clone git@github.com-kobabasu:kobabasu/micro-sass.git sass
 ファイル構成は以下、
 configs, base, lib, pages, layouts, modulesに別れる
 
-| ファイル名 | 内容 |
-| -- | -- |
-| style.sass | rootのファイル |
-| config.sass | ライブラリの初期設定 |
-| vars.sass | フレームワーク全体の初期設定 |
-| arrays.scss | color, widthなど配列で展開する |
-| base.sass | elementに影響を与えるクラス |
-| theme.sass | admin, frontの両方に関わるクラス<br />色、font-sizeなどアピアランスの設定 |
-| functions | sassのfunction集 汎用のディレクトリ |
-| mixins | sassのmixin集 汎用のディレクトリ |
-| motions | motionに関わるクラス 汎用のディレクトリ |
-| layouts | 各ページ共通のクラス admin,frontに別れる |
-| pages | 各ページそれぞれのクラス admin,frontに別れる |
-| modules | 汎用のディレクトリ |
+| ファイル名 | 内容
+| ---- | ----
+| style.sass | rootのファイル
+| config.sass | ライブラリの初期設定
+| vars.sass | フレームワーク全体の初期設定
+| arrays.scss | color, widthなど配列で展開する
+| base.sass | elementに影響を与えるクラス
+| theme.sass | admin, frontの両方に関わるクラス
+| functions | sassのfunction集 汎用のディレクトリ
+| mixins | sassのmixin集 汎用のディレクトリ
+| motions | motionに関わるクラス 汎用のディレクトリ
+| layouts | 各ページ共通のクラス admin,frontに別れる
+| pages | 各ページそれぞれのクラス admin,frontに別れる
+| modules | 汎用のディレクトリ
 
 ### modules
-| ファイル名 | 内容 |
-| -- | -- |
-| index.sass | 読込順の設定 |
-| debug.sass | 横のgridを引くクラス 縦のgridはneat |
-| bootstrap.sass | bootstrapを上書きするクラス |
-| neat.sass | neatを上書きするクラス |
-| fontawesome.sass | fontawesomeを上書きするクラス |
-| colors.sass | arraysのcolorを展開 |
-| widths.sass | arraysのwidthを展開 |
-| grid.sass | gridに関するクラス |
-| anchor.sass | anchorのhoverを一括で設定するクラス |
-| table.sass | tableに関するクラス |
-| form.sass | formに関するクラス |
-| responsive.sass | responsiveに関するクラス |
-| typography.sass | typeに関するクラス |
+
+| ファイル名 | 内容
+| --- | ---
+| index.sass | 読込順の設定
+| debug.sass | 横のgridを引くクラス 縦のgridはneat
+| bootstrap.sass | bootstrapを上書きするクラス
+| neat.sass | neatを上書きするクラス
+| fontawesome.sass | fontawesomeを上書きするクラス
+| colors.sass | arraysのcolorを展開
+| widths.sass | arraysのwidthを展開
+| grid.sass | gridに関するクラス
+| anchor.sass | anchorのhoverを一括で設定するクラス
+| table.sass | tableに関するクラス
+| form.sass | formに関するクラス
+| responsive.sass | responsiveに関するクラス
+| typography.sass | typeに関するクラス
