@@ -11,8 +11,8 @@
 
 @mixin bgImg($imgs...)
   $path: ''
-  @if global-variable-exists(pathImg)
-    $path: $pathImg
+  @if global-variable-exists(path-img)
+    $path: $path-img + '/'
 
   $urls: ()
   @each $img in $imgs
