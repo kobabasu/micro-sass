@@ -1,6 +1,12 @@
 /*
   # mixins/bgImg.sass
-  * 
+  background-imageに展開  
+  引数に画像ファイルを4つまで記述  
+  グローバル変数 pathImgが設定されていれば付加する
+  
+  @method bgImg
+  @param $imgs {String} 拡張子を含めた画像ファイル名
+  @return void
   */
 
 @mixin bgImg($imgs...)
