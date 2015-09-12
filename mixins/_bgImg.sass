@@ -1,0 +1,15 @@
+/*
+  # mixins/bgImg.sass
+  * 
+  */
+
+@mixin bgImg($imgs...)
+  $path: ''
+  @if global-variable-exists(pathImg)
+    $path: $pathImg
+
+  $urls: ()
+  @each $img in $imgs
+    $urls: append($urls, url($path + $img), comma)
+
+  background-image: $urls
