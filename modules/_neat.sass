@@ -13,5 +13,5 @@
   */
 
 body:before
-  @include media($mobile)
-    @include grid-column-gradient(gradient-stops($mobile-columns))
+  +media($mobile)
+    +grid-column-gradient(gradient-stops($mobile-columns))
