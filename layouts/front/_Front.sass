@@ -15,3 +15,49 @@
 
 #ready-Front
   background-color: $corp-background-color
+  // background-repeat: no-repeat
+  // +bgImg('bg_lt.gif', 'bg_lb.gif', 'bg_rt.gif', 'bg_rb.gif')
+  // +bgPos(top left, bottom left, top right, bottom right)
+
+/*
+  # #Front
+  frontのdefault設定
+  */
+
+#Front
+  +outer-container()
+  font-family: $corp-font-family
+  font-size: inherit
+  color: $corp-color
+  line-height: inherit
+  letter-spacing: inherit
+  text-align: inherit
+  margin: 0 auto
+
+/*
+  # article[id]
+  すべてのページに共通する設定
+  */
+
+#Admin > article[id]
+  +outer-container()
+
+/*
+  # Headings
+  h1, h2, h3, h4, h5, h6に設定 
+  */
+
+#Front
+  h1, h2, h3, h4, h5, h6
+    font-family: $corp-font-family
+
+/*
+  # page title
+  ページタイトルのh1
+  */
+
+#Admin > article[id] > h1:first-child
+  font-size: $heading-font-size
+  font-weight: inherit
+  line-height: $heading-line-height
+  letter-spacing: inherit
