@@ -5,7 +5,7 @@
   */
 
 #Sample
-  @include outer-container(960px)
+  +outer-container(960px)
 
 /*
   # header, footer, section
@@ -14,7 +14,7 @@
 
 #Sample
   header, footer, section
-    @include outer-container
+    +outer-container
     margin-bottom: $base-spacing * 2
 
 /*
@@ -28,9 +28,9 @@
   header
     padding-top: $base-spacing
     h1
-      @include span-columns(2)
+      +span-columns(2)
     nav
-      @include span-columns(10)
+      +span-columns(10)
       text-align: right
       a
         padding-right: $base-spacing
@@ -54,7 +54,7 @@
 #Sample
   #bootstrap
     div
-      @include span-columns(3)
+      +span-columns(3)
 
 /*
   # #animate
@@ -65,7 +65,7 @@
 #Sample
   #animate
     div
-      @include span-columns(4)
+      +span-columns(4)
       p
         margin: 0 auto $base-spacing
         width: $base-rem * 8
@@ -96,8 +96,8 @@
   #utils
     #responsive
       div
-        @include span-columns(4)
-        @include shift(4)
+        +span-columns(4)
+        +shift(4)
     #widths
       text-align: center
       div span
@@ -117,11 +117,11 @@
 #Sample
   #colors
     div
-      @include outer-container
+      +outer-container
       margin-bottom: $base-spacing * 2
       p
-        @include span-columns(2)
-        @include omega(6n)
+        +span-columns(2)
+        +omega(6n)
         height: $base-rem * 8
         line-height: $base-rem * 8
     a

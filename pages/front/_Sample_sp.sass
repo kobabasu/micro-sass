@@ -11,13 +11,13 @@
   */
 
 #Sample
-  @include media($mobile)
+  +media($mobile)
     header
       h1
-        @include span-columns(4)
+        +span-columns(4)
         text-align: center
       nav
-        @include span-columns(4)
+        +span-columns(4)
         text-align: center
         a
           display: block
@@ -30,11 +30,11 @@
   */
 
 #Sample
-  @include media($mobile)
+  +media($mobile)
     #bootstrap
       div
-        @include span-columns(2)
-        @include shift(1)
+        +span-columns(2)
+        +shift(1)
         margin-bottom: $base-spacing
 
 /*
@@ -45,12 +45,12 @@
   */
 
 #Sample
-  @include media($mobile)
+  +media($mobile)
     #fontawesome
       div
         pre
-          @include span-columns(2)
-          @include shift()
+          +span-columns(2)
+          +shift()
       a
         display: block
         margin: $base-spacing * 2
@@ -61,12 +61,12 @@
   */
 
 #Sample
-  @include media($mobile)
+  +media($mobile)
     #utils
       #responsive
         div
-          @include span-columns(2)
-          @include shift(1)
+          +span-columns(2)
+          +shift(1)
 
 /*
   # #colors
@@ -74,9 +74,9 @@
   */
 
 #Sample
-  @include media($mobile)
+  +media($mobile)
     #colors
       div
         p
-          @include span-columns(1)
-          @include omega(4n)
+          +span-columns(1)
+          +omega(4n)
