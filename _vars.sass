@@ -27,7 +27,7 @@ $base-rem: 1rem
   読み込むフォントの設定
   */
 
-@include web-fonts('Hind')
++web-fonts('Hind')
 
 /*
   # font-family
@@ -164,3 +164,16 @@ $base-timing:           ease
   */
 
 $base-z-index: 0
+
+/*
+  # front
+  frontはアピアランスがadmin(default)と違うため個別設定
+  */
+
+$front-font-family:      $corp-font-family
+$front-font-size:        $small-font-size
+$front-line-height:      $base-line-height
+$front-letter-spacing:   $base-letter-spacing
+$front-color:            $corp-color
+$front-color-secondary:  $corp-color-secondary
+$front-background-color: $corp-background-color

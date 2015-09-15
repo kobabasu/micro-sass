@@ -50,10 +50,12 @@ body
 
 /*
   # section elements
+  outer-containerを設定
   overflowをvisibleに設定
   */
 
 header, footer, section, article, nav, aside
+  +outer-container
   overflow: visible
 
 /*
@@ -81,26 +83,9 @@ li
   list-style-type: none
 
 /*
-  # table
-  widthを100%に  
+  # address
+  斜体を消す
   */
 
-table
-  width: 100%
-  th
-    font-weight: normal
-    text-align: left
-
-/*
-  # description list
-  table layoutにし左寄せ
-  */
-
-dl
-  display: table
-  width: 100%
-
-dt, dd
-  display: table-cell
-  vertical-align: top
-  text-align: left
+address
+  font-style: normal

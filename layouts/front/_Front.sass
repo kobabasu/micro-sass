@@ -14,20 +14,50 @@
   */
 
 #ready-Front
-  background-color: $corp-background-color
+  background-color: $front-background-color
+  // background-repeat: no-repeat
+  // +bgImg('bg_lt.gif', 'bg_lb.gif', 'bg_rt.gif', 'bg_rb.gif')
+  // +bgPos(top left, bottom left, top right, bottom right)
 
 /*
-  # #root
-  react用のindex.htmlに記述されるdiv#rootの設定  
+  # #Front
+  frontのdefault設定
   */
 
-#root
-  @include outer-container
+#Front
+  +outer-container()
+  font-family: $front-font-family
+  font-size: $front-font-size
+  color: $front-color-secondary
+  line-height: $front-line-height
+  letter-spacing: $front-letter-spacing
+  text-align: inherit
+  margin: 0 auto
 
 /*
-  # header, footer, section
-  outer-containerを設定
+  # article[id]
+  すべてのページに共通する設定
   */
 
-header, footer, section
-  @include outer-container
+#Front > article[id]
+  +outer-container()
+
+/*
+  # Headings
+  h1, h2, h3, h4, h5, h6に設定 
+  */
+
+#Front
+  h1, h2, h3, h4, h5, h6
+    font-weight: normal
+
+/*
+  # page title
+  ページタイトルのh1
+  */
+
+#Front > article[id] > h1:first-child
+  font-size: $heading-font-size
+  font-weight: inherit
+  line-height: $heading-line-height
+  letter-spacing: inherit

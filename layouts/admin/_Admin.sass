@@ -15,35 +15,36 @@
 
 #ready-Admin
   background-color: $base-background-color
+  // background-repeat: no-repeat
+  // +bgImg('bg_lt.gif', 'bg_lb.gif', 'bg_rt.gif', 'bg_rb.gif')
+  // +bgPos(top left, bottom left, top right, bottom right)
 
 /*
-  # #root
-  react用のindex.htmlに記述されるdiv#rootの設定  
-  */
-
-#root
-  @include outer-container
-
-/*
-  # article[id]
-  ページ全体にpaddingを設ける
-  */
-
-#Admin > article[id]
-  padding: $base-spacing
-
-/*
-  # header, footer, section
-  outer-containerを設定
+  # #Admin
+  adminのdefault設定
   */
 
 #Admin
-  header, footer, section
-    @include outer-container
+  +outer-container(100%)
+  font-family: inherit
+  font-size: inherit
+  color: inherit
+  line-height: inherit
+  letter-spacing: inherit
+  text-align: inherit
+  margin: 0 auto
+
+/*
+  # article[id]
+  すべてのページに共通する設定
+  */
+
+#Admin > article[id]
+  +outer-container()
 
 /*
   # Headings
-  ゴシック体に変更
+  h1, h2, h3, h4, h5, h6に設定 
   */
 
 #Admin
@@ -51,13 +52,12 @@
     font-family: $base-san-serif
 
 /*
-  # table
-  theadのthのみ中央寄せ  
-  tdはデフォルトで右寄せ
+  # page title
+  ページタイトルのh1
   */
 
-#admin table
-  thead th
-    text-align: center
-  td
-    text-align: right
+#Admin > article[id] > h1
+  font-size: $heading-font-size
+  font-weight: inherit
+  line-height: $heading-line-height
+  letter-spacing: inherit
