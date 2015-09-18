@@ -12,6 +12,15 @@ git clone git@github.com-kobabasu:kobabasu/micro-sass.git sass
 1. `npm install`
 1. `npm run build`
 
+## npm script
+すべてsassディレクトリ内で使用
+
+```
+npm run build:  docも生成するため長い
+npm run watch:  watch
+npm run sass :  コンパイル このスクリプトのみcomressed
+```
+
 ## check
 1. ブラウザで確認
    `open sample/index.html -a Google\ Chrome`
