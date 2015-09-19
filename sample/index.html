@@ -46,6 +46,10 @@
         <a href="#colors">
           <i class="fa fa-check-square-o"></i>
           colors</a>
+
+        <a href="#shadows">
+          <i class="fa fa-check-square-o"></i>
+          shadows</a>
       </nav>
     </header>
 
@@ -528,10 +532,25 @@
         <p class="bgcolor-twitter">Twitter</p>
       </div>
     </section>
+
+    <section id="shadows">
+      <h1>Shadows</h1>
+
+      <div>
+        <p class="shadow-small">wobble</p>
+      </div>
+      <div>
+        <p class="shadow-base">swing</p>
+      </div>
+      <div>
+        <p class="shadow-large">tada</p>
+      </div>
+    </section>
   </div>
 
   <script>
     document.onkeydown = function(e) {
+      document.body.style.height = 'auto';
       (e.which == 71) ? document.body.classList.toggle('grid') : '';
     };
   </script>
