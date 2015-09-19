@@ -20,6 +20,20 @@
   // +bgPos(top left, bottom left, top right, bottom right)
 
 /*
+  # fullscreen
+  fulllscreen用の設定  
+  html, bodyは予めmodules/fullscreenで100%に  
+  react用のdiv#rootはmodules/reactに記述  
+  必要がなければbodyに変更  
+  */
+
+#Admin
+  min-height: 100%
+
+#root > #Admin
+  height: auto
+
+/*
   # #Admin
   adminのdefault設定
   */
