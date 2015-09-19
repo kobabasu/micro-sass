@@ -128,3 +128,19 @@
       display: inline-block
       height: $base-spacing * 2
       margin: 0 $base-spacing * 2
+
+/*
+  # #shadows
+  shadows用にboxを用意  
+  neatのautomatic rowで構成
+  */
+
+#Sample
+  #shadows
+    div
+      +span-columns(4)
+      p
+        margin: 0 auto $base-spacing
+        width: $base-rem * 8
+        height: $base-rem * 8
+        line-height: $base-rem * 8
