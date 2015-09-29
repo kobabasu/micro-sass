@@ -14,7 +14,7 @@
   */
 
 #ready-Front
-  background-color: $front-background-color
+  background-color: $front-base-background-color
   // background-repeat: no-repeat
   // +bgImg('bg_lt.gif', 'bg_lb.gif', 'bg_rt.gif', 'bg_rb.gif')
   // +bgPos(top left, bottom left, top right, bottom right)
@@ -40,12 +40,12 @@
 
 #Front
   +outer-container()
-  font-family: $front-font-family
-  font-size: $front-font-size
+  font-family: $front-base-font-family
+  font-size: $front-base-font-size
   color: $front-color-secondary
-  line-height: $front-line-height
-  letter-spacing: $front-letter-spacing
-  text-align: inherit
+  line-height: $front-base-line-height
+  letter-spacing: $front-base-letter-spacing
+  text-align: center
   margin: 0 auto
 
 /*
@@ -71,7 +71,8 @@
   */
 
 #Front > article[id] > h1:first-child
-  font-size: $heading-font-size
+  font-size: $front-heading-font-size
+  line-height: $front-heading-line-height
+  letter-spacing: $heading-letter-spacing
   font-weight: inherit
-  line-height: $heading-line-height
   letter-spacing: inherit
