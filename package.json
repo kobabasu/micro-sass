@@ -26,7 +26,8 @@
   },
 
   "scripts": {
-    "preinstall": "cp ./{.bowerrc,bower.json} ../; mkdir ../{css,docs}; npm install -g bower styledocco; cd ../; bower install",
+    "gitkeep": "touch ../css/.gitkeep; touch ../docs/.gitkeep;",
+    "preinstall": "cp ./{.bowerrc,bower.json} ../; mkdir ../{css,docs}; npm run gitkeep; cd ../; bower install",
     "start": "NODE_ENV=production NODE_PATH=../",
 
     "sass": "sassc -M ./sass/style.sass > ./css/style.css -m ./css/style.css",
