@@ -26,6 +26,7 @@
   },
 
   "scripts": {
+    "global": "npm install -g bower styledocco;",
     "gitkeep": "touch ../css/.gitkeep; touch ../docs/.gitkeep;",
     "preinstall": "cp ./{.bowerrc,bower.json} ../; mkdir ../{css,docs}; npm run gitkeep; cd ../; bower install",
     "start": "NODE_ENV=production NODE_PATH=../",
