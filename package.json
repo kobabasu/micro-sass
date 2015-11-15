@@ -5,7 +5,7 @@
   "main": "sample/css/style.css",
   "repository": {
     "type": "git",
-    "url": "//github.com/kobabasu/micro-coffee.git"
+    "url": "//github.com/kobabasu/micro-sass.git"
   },
 
   "keywords": [
@@ -26,7 +26,9 @@
   },
 
   "scripts": {
-    "preinstall": "cp ./{.bowerrc,bower.json} ../; mkdir ../{css,docs}; npm install -g bower styledocco; cd ../; bower install",
+    "global": "npm install -g bower styledocco;",
+    "gitkeep": "touch ../css/.gitkeep; touch ../docs/.gitkeep;",
+    "preinstall": "cp ./{.bowerrc,bower.json} ../; mkdir ../{css,docs}; npm run gitkeep; cd ../; bower install",
     "start": "NODE_ENV=production NODE_PATH=../",
 
     "sass": "sassc -M ./sass/style.sass > ./css/style.css -m ./css/style.css",
