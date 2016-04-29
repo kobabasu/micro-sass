@@ -1,0 +1,40 @@
+/*
+  # modules/corner-ribbon.sass
+  .corner-ribbonをに関するクラスを定義
+  ページの角にリボンを表示する  
+  vars.sassなどに影響されないように記述
+  */
+
+/*
+  # .corner-ribbon
+  divなどblock要素に設定
+  */
+
+.corner-ribbon
+  position: fixed
+  right: -38px
+  top: 38px
+  width: 180px
+  font-size: 1.6rem
+  background-color: #aa0000
+  overflow: hidden
+  white-space: nowrap
+  transform: rotate(45deg)
+  box-shadow: 0 0 10px #888
+
+/*
+  # .corner-ribbon a
+  divに内包するaタグの設定
+  */
+
+.corner-ribbon a
+  display: block
+  margin: 1px 0
+  padding: 8px 0
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Meiryo', sans-serif
+  font-size: 81.25%
+  font-weight: bold
+  text-align: center
+  line-height: 1rem
+  color: #fff
+  border: 1px solid #faa
