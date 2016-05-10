@@ -68,7 +68,10 @@ textarea
   文字色は白で固定  
   背景色のvarsの初期値を設定  
   borderはgridの関係でなし  
-  font-sizeはsmall
+  font-sizeはsmall  
+  labelでラップしている場合や  
+  labelに隣接している場合には  
+  左にmarginをとる
   */
 
 button
@@ -77,13 +80,11 @@ button
   background-color: $base-color-button
   border: none
 
-/*
-  # label
-  右側のpaddingを0に設定
-  */
+label+button
+  margin-left: $small-spacing
 
-label
-  padding-right: $small-spacing
+label>button
+  margin-left: $small-spacing
 
 /*
   # p
