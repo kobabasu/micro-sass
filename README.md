@@ -26,15 +26,16 @@ npm run sass :  コンパイル このスクリプトのみcomressed
    `open sample/index.html -a Google\ Chrome`
 
 ## path
-* `style.sass`内のroot変数を変更
-* sample/index.htmlのbase hrefのパスを変更
+* `style.sass`を変更
+* `lib.sass`を変更
+* `config/_config.sass`を変更
+* sample/index.htmlのパスを変更
 
 ## project
 * 上記pathの確認
 
 ## files
 ファイル構成は以下、
-configs, base, lib, pages, layouts, modulesに別れる
 
 | ファイル名 | 内容
 | ---- | ----
@@ -43,28 +44,11 @@ configs, base, lib, pages, layouts, modulesに別れる
 | vars.sass | フレームワーク全体の初期設定
 | arrays.scss | color, widthなど配列で展開する
 | base.sass | elementに影響を与えるクラス
-| theme.sass | admin, frontの両方に関わるクラス
-| functions | sassのfunction集 汎用のディレクトリ
-| mixins | sassのmixin集 汎用のディレクトリ
-| motions | motionに関わるクラス 汎用のディレクトリ
-| layouts | 各ページ共通のクラス admin,frontに別れる
-| pages | 各ページそれぞれのクラス admin,frontに別れる
-| modules | 汎用のディレクトリ
-
-### modules
-
-| ファイル名 | 内容
-| --- | ---
-| index.sass | 読込順の設定
-| debug.sass | 横のgridを引くクラス 縦のgridはneat
-| bootstrap.sass | bootstrapを上書きするクラス
-| neat.sass | neatを上書きするクラス
-| fontawesome.sass | fontawesomeを上書きするクラス
-| colors.sass | arraysのcolorを展開
-| widths.sass | arraysのwidthを展開
-| grid.sass | gridに関するクラス
-| anchor.sass | anchorのhoverを一括で設定するクラス
-| table.sass | tableに関するクラス
-| form.sass | formに関するクラス
-| responsive.sass | responsiveに関するクラス
-| typography.sass | typeに関するクラス
+| theme.sass | デザインに関わるクラス
+| extends | タグ・クラスをoverrideするもの
+| functions | sassのfunction集
+| mixins | sassのmixin集
+| motions | motionに関わるクラス
+| layouts | 各ページ共通のクラス
+| pages | 各ページそれぞれのクラス
+| modules | 汎用のクラス
