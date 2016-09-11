@@ -1,71 +1,57 @@
 /*
   # style.sass
-  importで構成
+  // importで構成
   */
 
-/*
-  # document root
-  パス設定  
-  
-  * $root      - projectのルート
-  * $path-root - document root
-  * $path-img  - 画像ディレクトリ
-  */
+//  # config
+//  各ライブラリ用の環境設定
 
-$root:        ".."
-$path-root:   "/survey"
-$path-img:    "/survey/img"
+@import 'config/config'
 
-/*
-  # config
-  各ライブラリ用の環境設定
-  */
-
-@import 'config'
-
-/*
-  # normalize
-  noramalizeはcssを読込
-  */
-
-@import url('#{$root}/vendor/normalize.css/normalize.css')
-
-/*
-  # vendor
-  bourbon, neat, animate, fontawesomeを読込  
-  sass3.4の仕様上scss,sassの読込に変数は使えない  
-  */
+// # vendor
+// bourbon, neat, animate, web-fontsを読込  
+// sass3.4の仕様上scss,sassの読込に変数は使えない
 
 @import '../vendor/bourbon/app/assets/stylesheets/_bourbon.scss'
 @import '../vendor/neat/app/assets/stylesheets/_neat.scss'
-@import '../vendor/animate.css-scss/animate.scss'
 @import '../vendor/sass-web-fonts/web-fonts.scss'
-@import '../vendor/font-awesome/scss/font-awesome.scss'
 
-/*
-  # vars, arrays
-  変数,配列を定義。すべてのファイルで利用
-  */
+// # vars, arrays
+// 変数,配列を定義。すべてのファイルで利用
 
-@import 'vars'
-@import 'arrays'
+@import 'config/colors'
+@import 'config/types'
+@import 'config/vars'
+@import 'config/arrays'
 
-/*
-  # lib
-  汎用のライブラリを読込
-  */
+// # functions, mixins
+// 汎用のライブラリを読込
 
 @import 'functions/index'
 @import 'mixins/index'
-@import 'motions/index'
 
-/*
-  # rule
-  smaccsをもとに構成  
-  */
+// # rule
+// smaccsをもとに構成  
 
 @import 'base'
-@import 'modules/index'
 @import 'theme'
 @import 'layouts/index'
 @import 'pages/index'
+
+// # extends
+// タグ・クラスをoverrideする 
+
+@import 'extends/index'
+
+// # vendor (modules, motions用)
+// bourbon, neat, animate, web-fontsを読込  
+// sass3.4の仕様上scss,sassの読込に変数は使えない
+
+/* animate.css */
+@import '../vendor/animate.css-scss/animate.scss'
+
+// # modules, motions
+// smaccsをもとに構成  
+
+@import 'motions/index'
+@import 'modules/index'
