@@ -4,16 +4,21 @@
   // prefixはなし
   */
 
-// # #root
-// react用のindex.htmlに記述されるdiv#rootの設定  
-
-#root
-  +outer-container
-
 // # fullscreen
 // body,htmlの設定はfullscreenに記述  
 // div#rootには必ず内包するboxがあるため  
 // body,htmlと同様にheight: 100%
+// neatなどfloatを使うdviを100%にするにはjsでやる
 
 #root
+  height: 100%
+
+// # $root > div
+// root直下のdiv layouts{Admin,Front,Default}など 
+// fullscreenにするためheight: 100%を設定 
+// relative, outer-containerも予め設定
+
+#root > div
+  position: relative
+  +outer-container
   height: 100%
