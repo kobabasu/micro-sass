@@ -1,5 +1,37 @@
 /*
   # layouts/TwoColumn.sass
   // layouts/TwoColumn.jsxに関するクラスを定義  
-  // prefixには`l-TwoColumn`を付与
+  // 大枠のレイアウトをneatを使って設定
+  // prefixには`l-Default`
   */
+
+$header-height: $base-spacing * 3
+
+.l-TwoColumn
+
+  header, footer
+    +fill-parent()
+    padding: $small-spacing $base-spacing
+
+  header
+    position: fixed
+    top: 0
+    z-index: 100
+
+  div.l-TwoColumn-Main
+    +fill-parent()
+    +row(table)
+    vertical-align: top
+
+    aside
+      +span-columns(2)
+      +pad()
+      padding-top: $header-height + $base-spacing
+
+    article
+      +span-columns(10)
+      +reset-display
+      +pad()
+      padding-top: inherit
+      &.l-TwoColumn-article-fillout
+        +pad(0)
