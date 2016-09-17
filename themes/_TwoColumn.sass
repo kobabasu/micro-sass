@@ -12,18 +12,22 @@
 
   header
     color: white
-    background-color: rgba(#192c4b, 0.95)
+    background-color: rgba($corp-color, 0.95)
 
   // # footer
   // 色と文字色を設定
 
   footer
     font-size: $small-font-size
-    border-top: 1px solid $gray-light
+    border-top: 1px solid $base-border-color
     background-color: white
 
   // # footer
   // 背景色を設定
 
   aside
-    background-color: $gray-lighter
+    color: white
+    background-color: $corp-color-secondary
+    border-right: 1px solid black
+    a
+      color: lighten($base-color-link, 20%)
