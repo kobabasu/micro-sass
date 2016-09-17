@@ -9,32 +9,55 @@ $header-height: $base-spacing * 3
 
 .l-TwoColumn
 
+  // # header, footer
+  // fill-parentで横幅100%
+  // paddingを設定
+
   header, footer
     +fill-parent()
     padding: $small-spacing $base-spacing
+
+  // # header
+  // position: fixedで固定
 
   header
     position: fixed
     top: 0
     z-index: 100
 
+  // # footer
+  // テキストを中央に
+
   footer
     text-align: center
+
+  // # div.l-TwoColumn-Main
+  // neatのrow(table)でmarginをなくす
 
   div.l-TwoColumn-Main
     +fill-parent()
     +row(table)
     vertical-align: top
 
+    // # aside
+    // header分topにpaddingを設定
+
     aside
       +span-columns(2)
       +pad()
       padding-top: $header-height + $base-spacing
+
+    // # article
+    // なぜかnavのpadding-topを引き継ぐためinherit
 
     article
       +span-columns(10)
       +reset-display
       +pad()
       padding-top: inherit
+
+      // # .l-TwoColumn-article-fillout
+      // paddingなし
+
       &.l-TwoColumn-article-fillout
         +pad(0)
