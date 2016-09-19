@@ -1,30 +1,48 @@
 /*
   # themes/TwoColumn.sass
-  // 色,文字サイズなどアピアランスに関するクラスを定義
-  // layouts/TwoColumn.sassと対となる
+  // 色,文字サイズ等アピアランスに関するスタイル
   // prefixには`t-TwoColumn'
   */
 
-.t-TwoColumn
+// # override
+// 全体のタグを上書き
 
-  // # header
-  // 色と文字色を設定
+html, body
+  background-color: $base-background-color
+
+body
+  color: $base-color
+
+body *::selection
+  background-color: rgba($brand-warning, 0.4)
+
+a
+  color: $base-color-link
+  &:hover
+    color: $base-color-link-hover
+
+button
+  color: white
+  background-color: $base-color-button
+
+form small
+  color: $brand-danger
+
+
+// # #Main内
+// ページ固有のクラス
+
+.t-TwoColumn
 
   header
     color: white
     background-color: rgba($corp-color, 0.95)
     box-shadow: 0 0px 5px 0 rgba($corp-color, 0.5)
 
-  // # footer
-  // 色と文字色を設定
-
   footer
     font-size: $small-font-size
     border-top: 1px solid $base-border-color
     background-color: white
-
-  // # footer
-  // 背景色を設定
 
   aside
     color: white
