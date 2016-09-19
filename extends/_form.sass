@@ -4,7 +4,6 @@
   // prefixはなし
   */
 
-
 // # form内のパーツ
 // 右側にmarginを追加  
 // 左右にpaddingを追加  
@@ -15,7 +14,6 @@ input, select, textarea, button
   padding: 0 $small-spacing
   border: 1px solid $form-border-color
   border-radius: $form-border-radius
-  -webkit-appearance: none;
 
 form
   input:last-child, select:last-child,
@@ -99,3 +97,9 @@ label.inputFileButton
   @extend button
   & input[type=file]
     display: none
+
+// # input[type=file], textarea
+// iOSで内側の影がつくため消す
+
+input[type=text], textarea
+  -webkit-appearance: none
