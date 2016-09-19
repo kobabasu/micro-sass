@@ -93,9 +93,20 @@ form
 // # input, select, button
 // line-height指定だと親のtableやdlで  
 // 1,2px超えてしまうheightを指定
+// labelでは文字の位置を調整
 
 input, select, button
   height: $heading-line-height
+  line-height: $heading-line-height
+
+label.inputFileButton
+  line-height: $heading-line-height * 1.05
+
+// # button
+// buttonの大きさがちょっと大きめ.15rem引く
+
+button
+  height: $heading-line-height - 0.15rem
 
 // # radio, checkbox
 // line-height指定だと余計なpddingがつく  
