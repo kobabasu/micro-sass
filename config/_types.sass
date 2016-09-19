@@ -4,18 +4,28 @@
   */
 
 // # font-family
-// 遊ゴシックはieでのline-heightで違いがあるため見送り。
-// メイリオで統一。遊書体はオプションで設定可能  
-// web-fontの読込は_config.sassで設定
+// 遊書体で統一
 
-$base-san-serif: 'Meiryo', arial, Helvetica, sans-serif
-$base-serif: 'Times New Roman', 'HG明朝E', 'Hiragino Mincho ProN', 'Meiryo', serif
+// AvenirはmacOS10.8以降
+$one-sans-serif: Avenir, 'Helvetica Neue', Heivetica, Arial
+$one-serif: Garamond, 'Times New Roman'
 
-$YuGothic-font-family: 'YuGothic', '遊ゴシック', 'Yu Gothic', $base-san-serif
-$YuMincho-font-family: 'YuMincho', '遊明朝', 'Yu Mincho', $base-serif
+// macOS10.9以前用
+$mac-sans-serif: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro'
+$mac-serif: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'HiraMinProN-W3'
 
-$base-font-family: $YuGothic-font-family
-$heading-font-family: $YuMincho-font-family
+// Meiryo UIはwin7, Meiryoはvista
+$win-sans-serif: 'Meiryo UI', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic'
+$win-serif: 'HGS明朝E', 'ＭＳ Ｐ明朝' , 'MS PMincho'
+
+$Yu-sans-serif: '遊ゴシック', 'Yu Gothic', '遊ゴシック体', 'YuGothic'
+$Yu-serif: '遊明朝', 'Yu Mincho', '遊明朝体', 'YuMincho'
+
+$base-sans-serif: $one-sans-serif, $win-sans-serif, $mac-sans-serif
+$base-serif: $one-serif, $win-serif, $mac-serif
+
+$base-font-family: $Yu-sans-serif, $base-sans-serif, sans-serif
+$heading-font-family: $Yu-serif, $base-serif, serif
 
 // # webfont
 // sass上でwebfontを読み込むmixinを使用   
