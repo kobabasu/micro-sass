@@ -39,7 +39,6 @@ $header-height: $base-spacing * 2
   div.l-TwoColumn-Main
     +fill-parent()
     +row(table)
-    vertical-align: top
 
     // # aside
     // header分topにpaddingを設定
@@ -48,15 +47,16 @@ $header-height: $base-spacing * 2
       +span-columns(2)
       +pad()
       padding-top: $header-height + $base-spacing
+      vertical-align: top
 
     // # article
-    // なぜかnavのpadding-topを引き継ぐためinherit
+    // header分topにpaddingを設定
 
     article
       +span-columns(10)
       +reset-display
       +pad()
-      padding-top: inherit
+      vertical-align: top
 
       // # .l-TwoColumn-article-fillout
       // paddingなし
