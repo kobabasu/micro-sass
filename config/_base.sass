@@ -37,10 +37,13 @@ html
 // positionはrelativeを予め設定  
 // z-indexに予め0を設定  
 // color, bgcolorのvarsの値を反映  
+// windowsはscrollbarの有無で
+// widthが変わるため常に表示
 
 body
   position: relative
   z-index: $base-z-index
+  overflow-y: scroll
 
 // # section elements
 // outer-containerを設定
