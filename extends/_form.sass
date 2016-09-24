@@ -83,6 +83,16 @@ label+button
 label>button
   margin-left: $small-spacing
 
+// # margin
+// タグ間のmarginを設定
+
+label+input, label+select
+  margin-left: $small-spacing
+
+button+small, input+small,
+select+small, label+small
+  margin-right: $small-spacing
+
 // # p
 // pタグを説明文用に利用  
 // paddingは合計small-spacingを設定
