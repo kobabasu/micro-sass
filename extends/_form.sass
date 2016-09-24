@@ -13,11 +13,12 @@ input[type=text], select, textarea, button
   display: inline-block
   margin-right: $small-spacing
   padding: 0 $small-spacing
-  border: 1px solid $form-border-color
+  border: $form-border
   border-radius: $form-border-radius
+  background-color: $form-background-color
 
 form
-  input:last-child, select:last-child,
+  input[type=text]:last-child, select:last-child,
   textarea:last-child, button:last-child
     margin-right: 0
 
