@@ -8,6 +8,7 @@
 // 右側にmarginを追加  
 // 左右にpaddingを追加  
 // border, border-radiusはvarsの値を初期値として設定
+// forcusはoutlineが角丸効かないのでbox-shadowで設定
 
 input[type=text], select, textarea, button
   display: inline-block
@@ -16,6 +17,11 @@ input[type=text], select, textarea, button
   border: $form-border
   border-radius: $form-border-radius
   background-color: $form-background-color
+  &:focus
+    outline: none
+    box-shadow: $form-focus
+    // outline: $form-focus // 例として記述
+    outline-offset: 0
 
 form
   input[type=text]:last-child, select:last-child,
@@ -42,11 +48,14 @@ textarea
 // # radio, checkbox
 // 文字を中心にもっていくため  
 // vertical-alignを設定
+// focusは無効に
 
 input[type=radio], input[type=checkbox]
   vertical-align: -$small-spacing / 2
   margin-left: $small-spacing
   margin-right: $base-spacing
+  &:focus
+    box-shadow: none
 
 // # textarea
 // 横幅を100%に設定
