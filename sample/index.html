@@ -337,15 +337,20 @@
         </div>
 
         <p class="lead">Select</p>
-        <p>- text &lt;select&gt; -</p>
+        <p>- &lt;label class="formSelect"&gt;
+        &lt;select&gt;
+        &lt;/label&gt; -</p>
+        <p>widthをselect, label共に指定できないので注意</p>
 
         <div>
           <form action="/">
-            text <select>
-              <option value="1">option first</option>
-              <option value="2">option second</option>
-              <option value="3">option last</option>
-            </select>
+            <label class="formSelect">
+              <select>
+                <option value="1">option first</option>
+                <option value="2">option second</option>
+                <option value="3">option last</option>
+              </select>
+            </label>
           </form>
         </div>
 
