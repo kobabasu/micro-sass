@@ -23,6 +23,12 @@ $colors: (
   'bg':             $base-background-color,
   'bg-secondary':   $secondary-background-color,
 
+  'form-bg':        $form-background-color,
+  'form-border':    $form-border-color,
+  'form-required':  $form-color-required,
+  'form-note':      $form-color-note,
+  'form-focus':     $form-color-focus,
+
   'gray-darker':    $gray-darker,
   'gray-dark':      $gray-dark,
   'gray':           $gray,
