@@ -25,7 +25,7 @@ header[id] > h1, footer[id] > h1
 // # section elements
 // margin-bottomに1行分のスペースを追加
 
-header, footer, section, article
+header, section, article
   margin-bottom: $base-spacing
 
 // # paragraph
@@ -33,7 +33,7 @@ header, footer, section, article
 // 1行分のmargin-bottomを設定
 
 p
-  line-height: $small-line-height
+  line-height: $base-line-height
   margin-bottom: $base-spacing
 
 // # small
@@ -93,9 +93,20 @@ form
 // # input, select, button
 // line-height指定だと親のtableやdlで  
 // 1,2px超えてしまうheightを指定
+// labelでは文字の位置を調整
 
 input, select, button
   height: $heading-line-height
+  line-height: $heading-line-height
+
+label.inputFileButton
+  line-height: $heading-line-height * 1.05
+
+// # button
+// buttonの大きさがちょっと大きめ.15rem引く
+
+button
+  height: $heading-line-height - 0.15rem
 
 // # radio, checkbox
 // line-height指定だと余計なpddingがつく  

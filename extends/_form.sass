@@ -4,20 +4,27 @@
   // prefixはなし
   */
 
-
 // # form内のパーツ
 // 右側にmarginを追加  
 // 左右にpaddingを追加  
 // border, border-radiusはvarsの値を初期値として設定
+// forcusはoutlineが角丸効かないのでbox-shadowで設定
 
-input, select, textarea, button
+input[type=text], select, textarea, button
+  display: inline-block
   margin-right: $small-spacing
   padding: 0 $small-spacing
-  border: 1px solid $form-border-color
+  border: $form-border
   border-radius: $form-border-radius
+  background-color: $form-background-color
+  &:focus
+    outline: none
+    box-shadow: $form-focus
+    // outline: $form-focus // 例として記述
+    outline-offset: 0
 
 form
-  input:last-child, select:last-child,
+  input[type=text]:last-child, select:last-child,
   textarea:last-child, button:last-child
     margin-right: 0
 
@@ -41,11 +48,14 @@ textarea
 // # radio, checkbox
 // 文字を中心にもっていくため  
 // vertical-alignを設定
+// focusは無効に
 
 input[type=radio], input[type=checkbox]
   vertical-align: -$small-spacing / 2
   margin-left: $small-spacing
   margin-right: $base-spacing
+  &:focus
+    box-shadow: none
 
 // # textarea
 // 横幅を100%に設定
@@ -64,8 +74,6 @@ textarea
 
 button
   font-size: $small-font-size
-  color: white
-  background-color: $base-color-button
   border: none
   cursor: pointer
 
@@ -74,6 +82,16 @@ label+button
 
 label>button
   margin-left: $small-spacing
+
+// # margin
+// タグ間のmarginを設定
+
+label+input, label+select
+  margin-left: $small-spacing
+
+button+small, input+small,
+select+small, label+small
+  margin-right: $small-spacing
 
 // # p
 // pタグを説明文用に利用  
@@ -89,17 +107,4 @@ form p
 
 form small
   display: block
-  color: $brand-danger
   padding: $small-spacing / 2
-
-// # input[type=file]
-// fileはappearanceをlabelで置換  
-// labelでinputをラップする必要がある
-
-label.inputFileButton
-  display: inline-block
-  padding-top: $small-spacing / 2
-  cursor: pointer
-  @extend button
-  & input[type=file]
-    display: none

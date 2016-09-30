@@ -337,15 +337,20 @@
         </div>
 
         <p class="lead">Select</p>
-        <p>- text &lt;select&gt; -</p>
+        <p>- &lt;label class="formSelect"&gt;
+        &lt;select&gt;
+        &lt;/label&gt; -</p>
+        <p>widthをselect, label共に指定できないので注意</p>
 
         <div>
           <form action="/">
-            text <select>
-              <option value="1">option first</option>
-              <option value="2">option second</option>
-              <option value="3">option last</option>
-            </select>
+            <label class="formSelect">
+              <select>
+                <option value="1">option first</option>
+                <option value="2">option second</option>
+                <option value="3">option last</option>
+              </select>
+            </label>
           </form>
         </div>
 
@@ -366,7 +371,10 @@
             <select multiple>
               <option value="1">option first</option>
               <option value="2">option second</option>
-              <option value="3">option last</option>
+              <option value="3">option third</option>
+              <option value="4">option fourth</option>
+              <option value="5">option fifth</option>
+              <option value="6">option last</option>
             </select>
           </form>
         </div>
@@ -398,6 +406,21 @@
           <form action="/">
             <p>sample text</p>
             <input type="text" />
+          </form>
+        </div>
+
+        <p class="lead">File</p>
+        <p>- &lt;label class="formFile"&gt;
+        &lt;input type="file" /&gt;
+        &lt;/label&gt; -</p>
+
+        <div>
+          <form action="/">
+            <p>sample text</p>
+            <label class="formFile">
+              upload
+              <input type="file" />
+            </label>
           </form>
         </div>
 
@@ -460,24 +483,36 @@
     <section id="colors">
       <h1>Colors</h1>
       <p class="lead">Base Colors</p>
-      <p>- set in _vars.sass -</p>
+      <p>- set in config/_colors.sass -</p>
 
       <div>
         <p class="bgcolor-base">base</p>
         <p class="bgcolor-base-reverse">base-reverse</p>
         <p class="bgcolor-link">link</p>
         <p class="bgcolor-link-hover">link-hover</p>
+        <p class="bgcolor-selection">selection</p>
         <p class="bgcolor-button">button</p>
         <p class="bgcolor-border">border</p>
         <p class="bgcolor-bg">bg</p>
         <p class="bgcolor-bg-secondary">bg-secondary</p>
       </div>
 
+      <p class="lead">Form Colors</p>
+      <p>- set in config/_colors.sass -</p>
+
+      <div>
+        <p class="bgcolor-form-bg">gray-darker</p>
+        <p class="bgcolor-form-border">form-border</p>
+        <p class="bgcolor-form-required">form-required</p>
+        <p class="bgcolor-form-note">form-note</p>
+        <p class="bgcolor-form-focus">form-focus</p>
+      </div>
+
       <p class="lead">
         Gray Colors
         <small>compatible with bootstrap.css</small>
       </p>
-      <p>- set in _vars.sass -</p>
+      <p>- set in config/_colors.sass -</p>
 
       <div>
         <p class="bgcolor-gray-darker">gray-darker</p>
@@ -491,7 +526,7 @@
         Brand Colors
         <small>compatible with bootstrap.css</small>
       </p>
-      <p>- set in _vars.sass -</p>
+      <p>- set in config/_colors.sass -</p>
 
       <div>
         <p class="bgcolor-brand-primary">brand-primary</p>
@@ -502,7 +537,7 @@
       </div>
 
       <p class="lead">Corporation Colors</p>
-      <p>- set in _vars.sass -</p>
+      <p>- set in config/_colors.sass -</p>
 
       <div>
         <p class="bgcolor-corp">corp</p>
