@@ -1,34 +1,63 @@
 /*
   # themes/TwoColumn.sass
-  // 色,文字サイズなどアピアランスに関するクラスを定義
-  // layouts/TwoColumn.sassと対となる
+  // 色,文字サイズ等アピアランスに関するスタイル
   // prefixには`t-TwoColumn'
   */
 
-// # article[id] > h1
-// font-sizeをconfig/types.sassから読込 
+// # override
+// 全体のタグを上書き
+
+html, body
+  background-color: $base-background-color
+
+body
+  color: $base-color
+
+body *::selection
+  background-color: $base-color-selection
+
+a
+  color: $base-color-link
+  &:hover
+    color: $base-color-link-hover
+
+button
+  color: white
+  background-color: $base-color-button
+
+form small
+  color: $brand-danger
+
+// # div#Main
+// ページ固有のクラス
 
 .t-TwoColumn
-  article[id] > h1
-    font-size: $heading-font-size
-    line-height: $heading-line-height
-
-// # header
-// 色と文字色を設定
 
   header
     color: white
-    background-color: rgba(#192c4b, 0.95)
-
-// # footer
-// 色と文字色を設定
+    background-color: rgba($corp-color, 0.95)
+    box-shadow: 0 0px 5px 0 rgba($corp-color, 0.5)
 
   footer
-    text-align: center
-    border-top: 1px solid $corp-color
+    font-size: $small-font-size
+    border-top: 1px solid $base-border-color
+    background-color: white
 
-// # footer
-// 背景色を設定
+// # aside#Nav
+// 左ナビ固有のクラス
+
+.t-TwoColumn
 
   aside
-    background-color: $gray-lighter
+    color: white
+    background-color: $corp-color-secondary
+    border-right: 1px solid black
+    li
+      border-bottom: 1px solid rgba(white, 0.1)
+      background-color: rgba(black, 0.3)
+      &.l-Nav-external
+        background-color: rgba(black, 0.1)
+      i
+        color: darken($base-color-link, 0.9)
+      a
+        color: lighten($base-color-link, 0.2)

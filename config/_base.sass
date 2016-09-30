@@ -1,5 +1,5 @@
 /*
-  # base.sass
+  # config/base.sass
   // 要素に影響を与えるスタイルを定義  
   // animate.cssでもmargin, paddingを0にしている  
   // font-family, font-size, line-heightは  
@@ -18,7 +18,7 @@ del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var, b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-time, mark, audio, video
+time, mark, audio, video, canvas
   margin: 0
   padding: 0
   border: 0
@@ -37,12 +37,14 @@ html
 // positionはrelativeを予め設定  
 // z-indexに予め0を設定  
 // color, bgcolorのvarsの値を反映  
+// windowsはscrollbarの有無で
+// widthが変わるため常に表示
 
 body
   position: relative
-  color: $base-color
-  background-color: $base-background-color
   z-index: $base-z-index
+  overflow-x: hidden
+  overflow-y: scroll
 
 // # section elements
 // outer-containerを設定
@@ -95,3 +97,9 @@ button
 canvas
   display: inline-block
   vertical-align: bottom
+
+// # input[type=file], textarea
+// iOSで内側の影がつくため消す
+
+input[type=text], textarea
+  -webkit-appearance: none
