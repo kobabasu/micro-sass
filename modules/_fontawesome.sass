@@ -10,9 +10,16 @@
 .fa-stack .fa-circle
   line-height: 1.0em !important
 
+// # i
+// font-awesomeのみなので、
+// padding-rightを設定
+
+i.fa:not(.fa-stack-1x):not(.fa-stack-2x)
+  padding-right: $small-spacing
+
 // # i.fa
 // fontawesomeにデフォルトで右側にスペースを追加  
-// fa-circleには効かない用に設定
+// fa-circleには効かないように設定
 
 i.fa:not(.fa-circlie > i.fa)
   padding-right: $small-spacing

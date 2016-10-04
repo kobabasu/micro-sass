@@ -32,6 +32,11 @@ $heading-font-family: $Yu-serif, $base-serif, serif
 // クラスはlib.sassで読み込み
 $FontAwesome-font-family: 'FontAwesome'
 
+// # MaterialIcons
+// fontファイルはstyle.cssで読み込み
+// クラスはlib.sassで読み込み
+$MaterialIcons-font-family: 'Material Icons'
+
 // # webfont
 // 読み込むフォントの設定
 // sass上でwebfontを読み込むmixinを使用   
@@ -61,9 +66,10 @@ $heading-line-height:   3rem
 
 // # spacing
 // gridに関わるspacingの設定  
-// $base-remの整数倍になるよう設定すること
+// $base-remの整数倍に設定すること(tiny以外)
 
 $base-spacing:          $base-rem * 2
+$tiny-spacing:          $base-rem / 2
 $small-spacing:         $base-rem
 $large-spacing:         $base-rem * 4
 

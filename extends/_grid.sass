@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6
   margin-bottom: $base-spacing
 
 header[id] > h1, footer[id] > h1
-  margin-bottom: $base-spacing
+  margin-bottom: 0
 
 // # section elements
 // margin-bottomに1行分のスペースを追加
@@ -59,12 +59,12 @@ table, div.table
 
 th, td
   line-height: $small-line-height
-  padding-top: $small-spacing / 2
-  padding-bottom: $small-spacing / 2 - 0.1rem
+  padding-top: $tiny-spacing
+  padding-bottom: $tiny-spacing - 0.1rem
 
 table:not(.cells) tr:last-child > th, td
-  padding-top: $small-spacing / 2 - 0.1rem
-  padding-bottom: $small-spacing / 2 - 0.1rem
+  padding-top: $tiny-spacing - 0.1rem
+  padding-bottom: $tiny-spacing - 0.1rem
 
 // # table cells
 // rowspan, colspanが入るとさらにgirdが崩れる  
@@ -76,10 +76,10 @@ table:not(.cells) tr:last-child > th, td
 
 table.cells
   th, td
-    padding-bottom: $small-spacing / 2
+    padding-bottom: $tiny-spacing
   tr:last-child > td
-    padding-top: $small-spacing / 2 - 0.1rem
-    padding-bottom: $small-spacing / 2 - 0.1rem
+    padding-top: $tiny-spacing - 0.1rem
+    padding-bottom: $tiny-spacing - 0.1rem
 
 // # form
 // formタグが隙間ができるためline-heightを0  
