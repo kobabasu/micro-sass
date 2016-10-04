@@ -1,0 +1,57 @@
+/*
+  # modules/segmented-controls.sass
+  // 関連性の高い項目用ナビゲーションのスタイル
+  // prefixはなし
+  */
+
+// # ul.segmented-controls
+// segmented-controlsのスタイルを設定
+
+ul.segmented-controls
+  display: table
+  box-sizing: border-box
+  border-collapse: separate
+  border: 1px solid $base-color
+  border-radius: $base-border-radius
+  background-color: $form-background-color
+
+// # ul.segmented-controls li
+// 中央揃え、li全体をクリック対象とする
+
+ul.segmented-controls
+  li
+    display: table-cell
+    padding: 0 $base-spacing
+    text-align: center
+    line-height: $heading-line-height
+    border-right: 1px solid $base-color
+    cursor: pointer
+    +transition(all $base-duration $base-timing)
+    &:last-child
+      border-right: none
+
+    // # ul.segmented-controls li:hover
+    // マウスオーバー時、文字選択の色と同じ色をつける
+
+    &:hover
+      background-color: $base-color-selection
+
+    // # ul.segmented-controls li:hover
+    // 選択後は、色をつけクリック対象から外す
+
+    &.selected
+      background-color: $base-color-selection
+      cursor: default
+      pointer-events: none
+
+// # ul.segmented-controls.max-width
+// 画面全体表示用のオプション
+
+ul.segmented-controls
+  &.max-width
+    width: 100%
+    margin-bottom: $base-spacing
+    border: 2px solid $base-color
+    border-radius: $large-border-radius
+    li
+      padding: $tiny-spacing $base-spacing

@@ -1,0 +1,34 @@
+/*
+  # modules/material-icons.sass
+  // material-design-iconsの設定
+  // prefixはなし
+  */
+
+// # i.material-icons
+// googleの公式のものをもとに変更し利用
+
+i.material-icons
+  font-family: 'Material Icons'
+  display: inline-block
+  height: 1
+  width: $base-spacing
+  direction: ltr
+  vertical-align: -7%
+
+  -webkit-font-smoothing: antialiased // all Webkit
+  text-rendering: optimizeLegibility // Safari & Chrome
+  -moz-osx-font-smoothing: grayscale // FF
+  font-feature-settings: 'liga' // IE
+
+// # .md-18, .md-24, .md-36
+// サイズを三種類用意
+
+$mdWidths: (18, 24, 36)
+
+i.material-icons
+  @each $w in $mdWidths
+    $index: index($mdWidths, $w) - 1
+    &.md-#{$w}
+      width: #{$w * 1.25}px
+      font-size: #{$w}px
+      vertical-align: -#{$index * 4}px

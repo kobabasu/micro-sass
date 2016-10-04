@@ -25,8 +25,24 @@ $fa: '../../vendor/font-awesome/fonts/fontawesome-webfont'
 
 @font-face
   font-family: 'FontAwesome'
+  font-style: normal
+  font-weight: 400
   src: url(#{$fa}.eot)
   src: url(#{$fa}.eot?#iefix) format('eot'),url(#{$fa}.woff) format('woff'),url(#{$fa}.ttf) format('truetype'),url(#{$fa}.svg#FontAwesome) format('svg')
+
+// # Material Icons
+// material design fontsのfontsファイルをnpm packageより読込
+// font-family: Material Iconsで使用可能
+// クラスの方はmodules/material-icons.sassで設定
+
+$md: '../../vendor/material-design-icons/iconfont/MaterialIcons-Regular'
+
+@font-face
+  font-family: 'Material Icons'
+  font-style: normal
+  font-weight: 400
+  src: url(#{$md}.eot)
+  src: url(#{$md}.eot?#iefix) format('eot'),url(#{$md}.woff) format('woff'),url(#{$md}.ttf) format('truetype'),url(#{$md}.svg#FontAwesome) format('svg')
 
 // # vars, arrays
 // 変数,配列を定義。すべてのファイルで利用
@@ -57,7 +73,7 @@ $fa: '../../vendor/font-awesome/fonts/fontawesome-webfont'
 // sass3.4の仕様上scss,sassの読込に変数は使えない
 
 /* animate.css */
-@import '../vendor/animate.css-scss/animate.scss'
+@import '../../vendor/animate.css-scss/animate.scss'
 
 // # modules, motions
 // smaccsをもとに構成  
@@ -70,4 +86,6 @@ $fa: '../../vendor/font-awesome/fonts/fontawesome-webfont'
 
 @import 'layouts/index'
 @import 'pages/index'
+@import 'containers/index'
+@import 'components/index'
 @import 'themes/index'
