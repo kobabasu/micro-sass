@@ -33,33 +33,33 @@ $header-height: $base-spacing * 2
     min-height: $header-height
     text-align: center
 
-  // # div.l-TwoColumn-Main
-  // neatのrow(table)でmarginをなくす
+// # div.l-TwoColumn-Main
+// neatのrow(table)でmarginをなくす
 
-  div.l-TwoColumn-Main
-    +fill-parent()
-    +row(table)
+div.l-TwoColumn-Main
+  +fill-parent()
+  +row(table)
 
-    // # aside
-    // header分topにpaddingを設定
+  // # aside
+  // header分topにpaddingを設定
 
-    & > aside
-      +span-columns(2)
-      padding-top: $header-height + $tiny-spacing
-      vertical-align: top
+  & > aside
+    +span-columns(2)
+    padding-top: $header-height + $tiny-spacing
+    vertical-align: top
 
-    // # article
-    // header分topにpaddingを設定
+  // # article
+  // header分topにpaddingを設定
 
-    & > article
-      +span-columns(10)
-      +reset-display
-      +pad()
-      padding-top: $header-height + $base-spacing
-      vertical-align: top
+  & > article
+    +span-columns(10)
+    +reset-display
+    +pad()
+    padding-top: $header-height + $base-spacing
+    vertical-align: top
 
-      // # .l-TwoColumn-article-fillout
-      // paddingなし
+    // # .l-TwoColumn-article-fillout
+    // paddingなし
 
-      &.l-TwoColumn-article-fillout
-        +pad(0)
+    &.l-TwoColumn-article-fillout
+      +pad(0)
