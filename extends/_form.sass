@@ -10,7 +10,8 @@
 // border, border-radiusはvarsの値を初期値として設定
 // forcusはoutlineが角丸効かないのでbox-shadowで設定
 
-input[type=text], select, textarea, button
+input[type=text], input[type=password],
+select, textarea, button
   display: inline-block
   margin-right: $small-spacing
   padding: 0 $small-spacing
@@ -24,7 +25,9 @@ input[type=text], select, textarea, button
     outline-offset: 0
 
 form
-  input[type=text]:last-child, select:last-child,
+  input[type=text]:last-child,
+  input[type=password]:last-child,
+  select:last-child,
   textarea:last-child, button:last-child
     margin-right: 0
 
