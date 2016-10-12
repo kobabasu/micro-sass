@@ -26,6 +26,10 @@ label.formSelect > select
   &::-ms-expand // for IE11
     display: none
 
+@-moz-document url-prefix()
+  label.formSelect > select
+    margin-top: -2px
+
 // after内FontAwesomeを使用
 // contentはunicodeなのはIE11のため
 
