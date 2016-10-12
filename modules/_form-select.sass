@@ -26,7 +26,7 @@ label.formSelect > select
     display: none
 
 // after内FontAwesomeを使用
-// contentはunicode
+// contentはunicodeなのはIE11のため
 
 label.formSelect:after
   position: absolute
@@ -34,7 +34,7 @@ label.formSelect:after
   bottom: 0
   right: 1rem
   // material icons
-  content: 'expand_more'
+  content: '\e5cf' // for IE11
   font-family: Material Icons
   // fontawesome
   // content: '\f078'
