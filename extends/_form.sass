@@ -9,6 +9,7 @@
 // 左右にpaddingを追加  
 // border, border-radiusはvarsの値を初期値として設定
 // forcusはoutlineが角丸効かないのでbox-shadowで設定
+// moz-focusingはfirefox選択時の点専用
 
 input[type=text], input[type=password],
 select, textarea, button
@@ -23,6 +24,9 @@ select, textarea, button
     box-shadow: $form-focus
     // outline: $form-focus // 例として記述
     outline-offset: 0
+  &:-moz-focusring 
+    color: transparent
+    text-shadow: 0 0 0 $base-color
 
 form
   input[type=text]:last-child,
