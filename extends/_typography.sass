@@ -6,11 +6,17 @@
 
 // # body
 // vars.sassから読込デフォルトとして設定
+// IE11では遊ゴシックのline-heightがくずれるため
+// hackでmeiryoを設定
 
 body
   font-family: $base-font-family
   font-size: $base-font-size
   letter-spacing: $base-letter-spacing
+
+@media all and (-ms-high-contrast:none)
+  body
+    font-family: $win-sans-serif
 
 // # heading
 // vars.sassから読込デフォルトとして設定
