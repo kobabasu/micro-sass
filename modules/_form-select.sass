@@ -19,26 +19,28 @@ label.formSelect > select
   margin-right: 0
   padding-right: $large-spacing
   height: 2.8rem
+  line-height: 2.8rem
   border: none
   background: none transparent
-  -moz-appearance: none
-  -webkit-appearance: none
-  -o-appearance: none
-  -ms-appearance: none
-  appearance: none
+  +appearance(none)
   &::-ms-expand // for IE11
     display: none
 
+@-moz-document url-prefix()
+  label.formSelect > select
+    margin-top: -2px
+
 // after内FontAwesomeを使用
-// contentはunicode
+// contentはunicodeなのはIE11のため
 
 label.formSelect:after
   position: absolute
   top: -0.2rem
   bottom: 0
   right: 1rem
+  line-height: $heading-line-height
   // material icons
-  content: 'expand_more'
+  content: '\e5cf' // for IE11
   font-family: Material Icons
   // fontawesome
   // content: '\f078'

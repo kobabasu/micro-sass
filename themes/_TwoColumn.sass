@@ -33,22 +33,31 @@ form small
 
 .t-TwoColumn
 
-  header
+  // # header
+  // グローバルヘッダ
+
+  & > header
     color: white
     background-color: rgba($corp-color, 0.95)
-    box-shadow: 0 0px 5px 0 rgba($corp-color, 0.5)
+    box-shadow: $small-box-shadow
 
-  footer
+  // # footer
+  // グローバルフッタ 
+
+  & > footer
     font-size: $small-font-size
     border-top: 1px solid $base-border-color
     background-color: white
 
-// # aside#Nav
-// 左ナビ固有のクラス
+// # div.l-TwoColumn-Main
+// aside, articleのwrapper
 
-.t-TwoColumn
+div.l-TwoColumn-Main
 
-  aside
+  // # aside
+  // 左ナビ固有のクラス
+
+  & > aside
     color: white
     background-color: $corp-color-secondary
     border-right: 1px solid black
@@ -56,6 +65,7 @@ form small
     // # aside#Nav li
     // liのスタイルを設定
     // iconの色を文字色と変えている
+
     li
       border-bottom: 1px solid rgba(white, 0.1)
       background-color: rgba(black, 0.3)
@@ -68,7 +78,6 @@ form small
 
     // # aside#Nav hr
     // hrのスタイルを設定
+
     hr
-      height: 1px
       background-color: rgba(white, 0.2)
-      border: none

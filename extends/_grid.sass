@@ -97,7 +97,7 @@ form
 
 input, select, button
   height: $heading-line-height
-  line-height: $heading-line-height
+  line-height: $base-line-height
 
 label.inputFileButton
   line-height: $heading-line-height * 1.05
@@ -117,16 +117,23 @@ button
 // gridがずれるためheightを小さくしている
 
 input[type=radio], input[type=checkbox]
-  height: $small-line-height
+  height: $base-line-height + 0.2rem
 
 th input[type=radio], td input[type=checkbox]
   height: $small-line-height - 0.15rem
+
+@media all and (-ms-high-contrast:none)
+  input[type=radio], input[type=checkbox]
+    height: $small-line-height + 0.2rem
+
+  th input[type=radio], td input[type=checkbox]
+    height: $small-line-height - 0.15rem
 
 // # label
 // labelの文字位置の調整
 
 label
-  vertical-align: middle
+  vertical-align: 1px
 
 // # Description List
 // marginを設定  

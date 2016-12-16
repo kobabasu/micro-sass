@@ -11,7 +11,7 @@
 // body, tableなどはnormalize.css  
 // section elementsは削除
 
-body, object, iframe,
+body, object, iframe, hr,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
@@ -54,6 +54,13 @@ body
 
 header, footer, section, article, nav, aside
   overflow: visible
+
+// # hr
+// background-colorで色を変更できるように設定
+
+hr
+  height: 1px
+  border: none
 
 // # img
 // ブロック要素に内容した際2pxの隙間の対応
@@ -103,5 +110,5 @@ canvas
 // # input[type=file], textarea
 // iOSで内側の影がつくため消す
 
-input[type=text], textarea
+input[type=text], input[type=password], textarea
   -webkit-appearance: none

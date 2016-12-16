@@ -10,6 +10,7 @@
 ul.segmented-controls
   display: table
   box-sizing: border-box
+  table-layout: fixed
   border-collapse: separate
   border: 1px solid $base-color
   border-radius: $base-border-radius
@@ -26,6 +27,7 @@ ul.segmented-controls
     line-height: $heading-line-height
     border-right: 1px solid $base-color
     cursor: pointer
+    +user-select(none)
     +transition(all $base-duration $base-timing)
     &:last-child
       border-right: none

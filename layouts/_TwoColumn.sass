@@ -13,14 +13,14 @@ $header-height: $base-spacing * 2
   // fill-parentで横幅100%
   // paddingを設定
 
-  header, footer
+  & > header, & > footer
     +fill-parent()
     padding: $small-spacing $base-spacing
 
   // # header
   // position: fixedで固定
 
-  header
+  & > header
     position: fixed
     top: 0
     min-height: $header-height
@@ -29,37 +29,37 @@ $header-height: $base-spacing * 2
   // # footer
   // テキストを中央に
 
-  footer
+  & > footer
     min-height: $header-height
     text-align: center
 
-  // # div.l-TwoColumn-Main
-  // neatのrow(table)でmarginをなくす
+// # div.l-TwoColumn-Main
+// neatのrow(table)でmarginをなくす
 
-  div.l-TwoColumn-Main
-    +fill-parent()
-    +row(table)
+div.l-TwoColumn-Main
+  +fill-parent()
+  +row(table)
 
-    // # aside
-    // header分topにpaddingを設定
+  // # aside
+  // header分topにpaddingを設定
 
-    aside
-      +span-columns(2)
-      padding-top: $header-height + $tiny-spacing
-      vertical-align: top
+  & > aside
+    +span-columns(2)
+    padding-top: $header-height + $tiny-spacing
+    vertical-align: top
 
-    // # article
-    // header分topにpaddingを設定
+  // # article
+  // header分topにpaddingを設定
 
-    article
-      +span-columns(10)
-      +reset-display
-      +pad()
-      padding-top: $header-height + $base-spacing
-      vertical-align: top
+  & > article
+    +span-columns(10)
+    +reset-display
+    +pad()
+    padding-top: $header-height + $base-spacing
+    vertical-align: top
 
-      // # .l-TwoColumn-article-fillout
-      // paddingなし
+    // # .l-TwoColumn-article-fillout
+    // paddingなし
 
-      &.l-TwoColumn-article-fillout
-        +pad(0)
+    &.l-TwoColumn-article-fillout
+      +pad(0)
