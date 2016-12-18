@@ -1,0 +1,13 @@
+/**
+ * node_modulesが存在するディレクトリからの
+ * ドキュメントルートを指定
+ */
+
+const root = './admin/';
+
+export const dir = {
+  root: root,
+  src:  root + 'sass/',
+  dist: root + 'css/',
+  docs: root + 'docs/sass/'
+}
