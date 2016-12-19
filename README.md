@@ -39,16 +39,18 @@ npm run sass :  コンパイル このスクリプトのみcomressed
 
 | ファイル名 | 内容
 | ---- | ----
+| components/ | redux用
+| config/ | 変数設定用のファイル群
+| containers/ | redux用
+| extends/ | タグ・クラスをoverrideするもの
+| functions/ | sassのfunction群
+| gulp/ | gulpのtaskファイル
+| layouts/ | 各ページ共通のクラス
+| mixins/ | sassのmixin群
+| modules/ | 汎用のクラス
+| motions/ | motionに関わるクラス
+| pages/ | 各ページ用のクラス
+| sample/ | サンプル
+| themes/ | 色・文字設定のみのクラス
+| lib.sass | コンパイル時間短縮のためライブラリを外部化
 | style.sass | rootのファイル
-| config.sass | ライブラリの初期設定
-| vars.sass | フレームワーク全体の初期設定
-| arrays.scss | color, widthなど配列で展開する
-| base.sass | elementに影響を与えるクラス
-| theme.sass | デザインに関わるクラス
-| extends | タグ・クラスをoverrideするもの
-| functions | sassのfunction集
-| mixins | sassのmixin集
-| motions | motionに関わるクラス
-| layouts | 各ページ共通のクラス
-| pages | 各ページそれぞれのクラス
-| modules | 汎用のクラス
