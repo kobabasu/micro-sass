@@ -9,6 +9,8 @@ import { dir } from '../dir.es6';
 class Sass extends DefaultRegistry {
 
   init() {
+    // task名の接頭辞を設定
+    let prefix = (dir.name == '') ? '' : dir.name + ':';
 
     /*
      * sass
@@ -20,11 +22,11 @@ class Sass extends DefaultRegistry {
       watch: dir.src  + '**/*.*'
     };
 
-    gulp.task('sass', shell.task([`
+    gulp.task(prefix + 'sass', shell.task([`
       sassc -M ${style.src} > ${style.dist}
     `]));
 
-    gulp.task('sass:min', shell.task([`
+    gulp.task(prefix + 'sass:min', shell.task([`
       sassc -t compressed -M ${style.src} > ${style.dist} \
       -m ${style.min}
     `]));
@@ -39,7 +41,7 @@ class Sass extends DefaultRegistry {
       min:   dir.dist + 'lib.min.css'
     };
 
-    gulp.task('sass:lib', shell.task([`
+    gulp.task(prefix + 'sass:lib', shell.task([`
       sassc -t compressed -M ${lib.src} > ${lib.dist} \
       -m ${lib.min}
     `]));
@@ -59,27 +61,27 @@ class Sass extends DefaultRegistry {
     };
 
     /*
-    gulp.task('docs:root', shell.task([`
+    gulp.task(prefix + 'docs:root', shell.task([`
       styledocco -n ${docs.title} \
       -o ${docs.dist} ${docs.src}
     `]));
 
-    gulp.task('docs:pages', shell.task([`
+    gulp.task(prefix + 'docs:pages', shell.task([`
       styledocco -n ${docs.title} \
       -o ${docs.dist + '/pages'} ${docs.pages}
     `]));
 
-    gulp.task('docs:layouts', shell.task([`
+    gulp.task(prefix + 'docs:layouts', shell.task([`
       styledocco -n ${docs.title} \
       -o ${docs.dist + '/layouts'} ${docs.layouts}
     `]));
 
     gulp.task(
-      'sass:docs',
+      prefix + 'sass:docs',
       gulp.series(
-        'docs:root',
-        'docs:pages',
-        'docs:layouts'
+        prefix + 'docs:root',
+        prefix + 'docs:pages',
+        prefix + 'docs:layouts'
     ));
     */
 
@@ -87,9 +89,9 @@ class Sass extends DefaultRegistry {
     /*
      * watch
      */
-    gulp.task('sass:watch', () => {
+    gulp.task(prefix + 'sass:watch', () => {
       gulp
-        .watch([], gulp.series('sass'))
+        .watch([], gulp.series(prefix + 'sass'))
         .on('error', err => process.exit(1));
     });
 
@@ -97,12 +99,12 @@ class Sass extends DefaultRegistry {
     /*
      * build
      */
-    gulp.task('sass:build',
+    gulp.task(prefix + 'sass:build',
       gulp.series(
-        'sass',
-        'sass:min',
-        'sass:lib'
-        //'sass:docs'
+        prefix + 'sass',
+        prefix + 'sass:min',
+        prefix + 'sass:lib'
+        // prefix + 'sass:docs'
     ));
   }
 };
