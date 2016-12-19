@@ -25,14 +25,15 @@ npm run sass :  コンパイル このスクリプトのみcomressed
 1. ブラウザで確認
    `open sample/index.html -a Google\ Chrome`
 
-## path
-* `style.sass`を変更
-* `lib.sass`を変更
-* `config/_config.sass`を変更
-* sample/index.htmlのパスを変更
+## gulp
+1. gulp/dir.es6を変更
+1. documentRootでgulp sass:buildを実行し動作するか確認
 
-## project
-* 上記pathの確認
+## path
+* `lib.sass`を変更
+* (`style.sass`を変更)
+* (`config/_config.sass`を変更)
+* (sample/index.htmlのパスを変更)
 
 ## files
 ファイル構成は以下、
