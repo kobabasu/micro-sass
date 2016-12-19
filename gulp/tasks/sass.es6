@@ -19,6 +19,7 @@ class Sass extends DefaultRegistry {
       src:   dir.src  + 'style.sass',
       dist:  dir.dist + 'style.css',
       min:   dir.dist + 'style.min.css',
+      map:   dir.dist + 'style.min.css.map',
       watch: dir.src  + '**/*.*'
     };
 
@@ -27,8 +28,8 @@ class Sass extends DefaultRegistry {
     `]));
 
     gulp.task(prefix + 'sass:min', shell.task([`
-      sassc -t compressed -M ${style.src} > ${style.dist} \
-      -m ${style.min}
+      sassc -t compressed -M ${style.src} > ${style.min} \
+      -m ${style.map}
     `]));
 
 
@@ -42,8 +43,8 @@ class Sass extends DefaultRegistry {
     };
 
     gulp.task(prefix + 'sass:lib', shell.task([`
-      sassc -t compressed -M ${lib.src} > ${lib.dist} \
-      -m ${lib.min}
+      sassc -t compressed -M ${lib.src} > ${lib.min} \
+      -m ${lib.map}
     `]));
 
 
