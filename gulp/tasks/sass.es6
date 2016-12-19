@@ -99,6 +99,7 @@ class Sass extends DefaultRegistry {
      */
     gulp.task('sass:build',
       gulp.series(
+        'sass',
         'sass:min',
         'sass:lib'
         //'sass:docs'
