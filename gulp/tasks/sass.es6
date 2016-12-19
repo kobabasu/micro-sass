@@ -92,7 +92,7 @@ class Sass extends DefaultRegistry {
      */
     gulp.task(prefix + 'sass:watch', () => {
       gulp
-        .watch([], gulp.series(prefix + 'sass'))
+        .watch([style.watch], gulp.series(prefix + 'sass'))
         .on('error', err => process.exit(1));
     });
 
