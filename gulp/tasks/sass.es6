@@ -18,33 +18,43 @@ class Sass extends DefaultRegistry {
     const style = {
       src:   dir.src  + 'style.sass',
       dist:  dir.dist + 'style.css',
-      min:   dir.dist + 'style.min.css',
       map:   dir.dist + 'style.min.css.map',
       watch: dir.src  + '**/*.*'
     };
 
     gulp.task(prefix + 'sass', shell.task([`
-      sassc -M ${style.src} > ${style.dist}
+      sassc ${style.src} ${style.dist}
     `]));
 
+
+    /*
+     * min 
+     * sasscのコマンドでsourcemapが出力されないため
+     * minifyファイルはsourcemapなし
+     */
+    const min = {
+      src:   dir.dist  + 'style.css',
+      min:   dir.dist + 'style.min.css'
+    };
     gulp.task(prefix + 'sass:min', shell.task([`
-      sassc -t compressed -M ${style.src} > ${style.min} \
-      -m ${style.map}
+      sassc -t compressed ${min.src} ${min.min}
     `]));
 
 
     /*
      * lib
+     * sasscのコマンドでsourcemapが出力されないため
+     * minifyファイルはsourcemapなし
      */
     const lib = {
-      src:   dir.src  + 'lib.sass',
+      src:   dir.src  + 'style.sass',
       dist:  dir.dist + 'lib.css',
-      min:   dir.dist + 'lib.min.css'
+      min:   dir.dist + 'lib.min.css',
+      map:   dir.dist + 'lib.min.css.map'
     };
 
     gulp.task(prefix + 'sass:lib', shell.task([`
-      sassc -t compressed -M ${lib.src} > ${lib.min} \
-      -m ${lib.map}
+      sassc -t compressed ${lib.dist} ${lib.min}
     `]));
 
 

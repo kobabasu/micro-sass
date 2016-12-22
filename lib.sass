@@ -9,15 +9,7 @@
 // # path setting
 // * $vendor - bowerのvendorディレクトリへのパス
 
-/**
-  * for gulpfile.bable.js in parent directory
-  */
 $vendor: "../../vendor/"
-
-/**
-  * for gulpfile.bable.js in this directory
-  */
-// $vendor: "../vendor/"
 
 
 // # normalize
@@ -31,18 +23,15 @@ $vendor: "../../vendor/"
 
 $fa-font-path: '#{$vendor}font-awesome/fonts'
 
-/**
-  * for gulpfile.bable.js in parent directory
-  */
-@import '../../vendor/font-awesome/scss/font-awesome.scss'
-
-/**
-  * for gulpfile.bable.js in this directory
-  */
-// @import '../vendor/font-awesome/scss/font-awesome.scss'
-
 
 // # material design icons
 // material-design-iconsの設定はlib.sass内は必要なく
 // fontファイルはstyle.css側で読込
 // クラスの方はmodules/material-icons.sassで設定
+
+
+// # material design iconic font
+// material design iconic fontを読込  
+// fontファイルをstyle.css側で読込
+
+@import '../../vendor/material-design-iconic-font/scss/material-design-iconic-font.scss'

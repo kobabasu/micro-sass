@@ -8,6 +8,7 @@
 
 @import 'config/config'
 
+
 // # vendor
 // bourbon, neat, animate, web-fontsを読込  
 // sass3.4の仕様上scss,sassの読込に変数は使えない
@@ -16,33 +17,53 @@
 @import '../../vendor/neat/app/assets/stylesheets/_neat.scss'
 @import '../../vendor/sass-web-fonts/web-fonts.scss'
 
-// # FonwAwesome
-// FontAwesomeのfontファイルをnpm packageより読込
-// font-family: FontAwesomeで使用可能
-// クラスの方はlib.sassで読み込み
 
-$fa: '../../vendor/font-awesome/fonts/fontawesome-webfont'
+// # Material design iconic font
+// bower.jsonで"material-design-iconic-font"を読み込むこと
+// font-family: Material-Design-Iconic-Fontで使用可能
+// クラスの方はlib.sassで読込
 
+$zmdi: '../../vendor/material-design-iconic-font/dist/fonts/Material-Design-Iconic-Font'
 @font-face
-  font-family: 'FontAwesome'
+  font-family: 'Material-Design-Iconic-Font'
   font-style: normal
   font-weight: 400
-  src: url(#{$fa}.eot)
-  src: url(#{$fa}.eot?#iefix) format('eot'),url(#{$fa}.woff) format('woff'),url(#{$fa}.ttf) format('truetype'),url(#{$fa}.svg#FontAwesome) format('svg')
+  src: url(#{$zmdi}.eot)
+  src: url(#{$zmdi}.eot?#iefix) format('eot'),url(#{$zmdi}.woff) format('woff'),url(#{$zmdi}.ttf) format('truetype'),url(#{$zmdi}.svg) format('svg')
+
+
+// # FonwAwesome
+// bower.jsonで"font-awesome"を読み込むこと
+// font-family: FontAwesomeで使用可能
+// クラスの方はlib.sassで読込 
+// クラスの方はmodules/fontawesome.sassで設定
+// modules/fontawesome.sassはデフォルトでoffなので
+// 使用時にはonにする
+
+// $fa: '../../vendor/font-awesome/fonts/fontawesome-webfont'
+// @font-face
+//   font-family: 'FontAwesome'
+//   font-style: normal
+//   font-weight: 400
+//   src: url(#{$fa}.eot)
+//   src: url(#{$fa}.eot?#iefix) format('eot'),url(#{$fa}.woff) format('woff'),url(#{$fa}.ttf) format('truetype'),url(#{$fa}.svg#FontAwesome) format('svg')
+
 
 // # Material Icons
-// material design fontsのfontsファイルをnpm packageより読込
+// bower.jsonで"material-design-icons"を読み込むこと
 // font-family: Material Iconsで使用可能
 // クラスの方はmodules/material-icons.sassで設定
+// modules/material-icons.sassはデフォルトでoffなので
+// 使用時にはonにする
 
-$md: '../../vendor/material-design-icons/iconfont/MaterialIcons-Regular'
+// $md: '../../vendor/material-design-icons/iconfont/MaterialIcons-Regular'
+// @font-face
+//   font-family: 'Material Icons'
+//   font-style: normal
+//   font-weight: 400
+//   src: url(#{$md}.eot)
+//   src: url(#{$md}.eot?#iefix) format('eot'),url(#{$md}.woff) format('woff'),url(#{$md}.ttf) format('truetype'),url(#{$md}.svg) format('svg')
 
-@font-face
-  font-family: 'Material Icons'
-  font-style: normal
-  font-weight: 400
-  src: url(#{$md}.eot)
-  src: url(#{$md}.eot?#iefix) format('eot'),url(#{$md}.woff) format('woff'),url(#{$md}.ttf) format('truetype'),url(#{$md}.svg#FontAwesome) format('svg')
 
 // # vars, arrays
 // 変数,配列を定義。すべてのファイルで利用
@@ -52,34 +73,36 @@ $md: '../../vendor/material-design-icons/iconfont/MaterialIcons-Regular'
 @import 'config/vars'
 @import 'config/arrays'
 
+
 // # functions, mixins
 // 汎用のライブラリを読込
 
 @import 'functions/index'
 @import 'mixins/index'
 
+
 // # base
 // ベースとなるタグをoverrideする  
 
 @import 'config/base'
+
 
 // # extends
 // タグ・クラスをoverrideする 
 
 @import 'extends/index'
 
-// # vendor (modules, motions用)
-// bourbon, neat, animate, web-fontsを読込  
-// sass3.4の仕様上scss,sassの読込に変数は使えない
 
 /* animate.css */
 @import '../../vendor/animate.css-scss/animate.scss'
+
 
 // # modules, motions
 // smaccsをもとに構成  
 
 @import 'motions/index'
 @import 'modules/index'
+
 
 // # rule
 // smaccsをもとに構成  
